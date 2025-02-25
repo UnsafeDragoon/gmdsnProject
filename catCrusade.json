@@ -176,6 +176,14 @@
         "name": "test",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "GkTgLHrWMAAIWuY.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "GkTgLHrWMAAIWuY.jpg",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -366,6 +374,23 @@
           "x": 556,
           "y": 193,
           "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 136,
+          "keepRatio": true,
+          "layer": "",
+          "name": "boss",
+          "persistentUuid": "184d2ccc-fd7e-4c41-82c5-d94df4874570",
+          "width": 174,
+          "x": 309,
+          "y": 13,
+          "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -644,6 +669,66 @@
             "characterSize": 60,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "boss",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "GkTgLHrWMAAIWuY.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1179,
+                            "y": 0
+                          },
+                          {
+                            "x": 1179,
+                            "y": 1158
+                          },
+                          {
+                            "x": 0,
+                            "y": 1158
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -663,6 +748,9 @@
           },
           {
             "objectName": "TestText"
+          },
+          {
+            "objectName": "boss"
           }
         ]
       },
