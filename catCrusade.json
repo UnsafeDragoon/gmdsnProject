@@ -1,9 +1,9 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 224,
-    "major": 5,
-    "minor": 5,
+    "build": 99,
+    "major": 4,
+    "minor": 0,
     "revision": 0
   },
   "properties": {
@@ -18,6 +18,7 @@
     "scaleMode": "linear",
     "sizeOnStartupMode": "",
     "templateSlug": "starting-platformer",
+    "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "catCrusade",
     "description": "",
@@ -92,6 +93,7 @@
   "resources": {
     "resources": [
       {
+        "alwaysLoaded": false,
         "file": "assets/StartingPlayer.png",
         "kind": "image",
         "metadata": "",
@@ -100,6 +102,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/StartingGround.png",
         "kind": "image",
         "metadata": "",
@@ -108,6 +111,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Background.png",
         "kind": "image",
         "metadata": "",
@@ -116,6 +120,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/StartingCoin.png",
         "kind": "image",
         "metadata": "",
@@ -124,6 +129,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Top arrow button.png",
         "kind": "image",
         "metadata": "",
@@ -136,6 +142,7 @@
         }
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Flat dark joystick border.png",
         "kind": "image",
         "metadata": "",
@@ -148,6 +155,7 @@
         }
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/Flat dark joystick thumb.png",
         "kind": "image",
         "metadata": "",
@@ -170,6 +178,7 @@
         "userAdded": false
       },
       {
+        "alwaysLoaded": false,
         "file": "assets/test.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -181,9 +190,6 @@
     "resourceFolders": []
   },
   "objects": [],
-  "objectsFolderStructure": {
-    "folderName": "__ROOT"
-  },
   "objectsGroups": [],
   "variables": [],
   "layouts": [
@@ -217,7 +223,6 @@
           "angle": 0,
           "customSize": false,
           "height": 78.99999999999999,
-          "keepRatio": true,
           "layer": "",
           "name": "Platformer_Character",
           "persistentUuid": "4ded1d81-e820-41d3-868a-3f314e5850bd",
@@ -248,43 +253,9 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "MobileControls",
-          "name": "Joystick",
-          "persistentUuid": "855d809a-f954-4072-86d5-1d6f0b24a066",
-          "width": 0,
-          "x": 176,
-          "y": 576,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 0,
-          "height": 120,
-          "keepRatio": true,
-          "layer": "MobileControls",
-          "name": "JumpButton",
-          "persistentUuid": "b1d437ce-f3b4-4799-875e-bb51f731cef0",
-          "width": 120,
-          "x": 1104,
-          "y": 576,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 64,
-          "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
           "persistentUuid": "1c4f7ab9-04d4-4cee-8572-96199ce1245c",
@@ -301,7 +272,6 @@
           "customSize": true,
           "depth": 1,
           "height": 64,
-          "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
           "persistentUuid": "672ee5c6-d2bb-4ae4-bc77-78d15064dd68",
@@ -318,7 +288,6 @@
           "customSize": true,
           "depth": 1,
           "height": 64,
-          "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
           "persistentUuid": "e595746c-dfaa-4c91-a246-d36934b5a906",
@@ -334,7 +303,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "keepRatio": true,
           "layer": "",
           "name": "Coins",
           "persistentUuid": "4c79f19c-996c-40e5-a8fb-fcaa13753abd",
@@ -350,7 +318,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "keepRatio": true,
           "layer": "",
           "name": "Coins",
           "persistentUuid": "ad149014-b1f1-44bd-8a58-27b4aa2a7d41",
@@ -366,7 +333,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "keepRatio": true,
           "layer": "",
           "name": "Coins",
           "persistentUuid": "4d3402ec-1550-4679-a363-6c1361c0fe53",
@@ -382,7 +348,6 @@
           "angle": 0,
           "customSize": false,
           "height": 0,
-          "keepRatio": true,
           "layer": "",
           "name": "Coins",
           "persistentUuid": "e6622e84-477f-4c15-95ff-82ba580b8e3d",
@@ -393,22 +358,6 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "test",
-          "persistentUuid": "73b428a3-56d8-45d5-8295-dee2f393b7f3",
-          "width": 0,
-          "x": 515,
-          "y": 197,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
@@ -416,6 +365,7 @@
           "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Platformer_Character",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -557,6 +507,7 @@
           "assetStoreId": "",
           "height": 64,
           "name": "Background",
+          "tags": "",
           "texture": "assets\\Background.png",
           "type": "TiledSpriteObject::TiledSprite",
           "width": 64,
@@ -568,6 +519,7 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Coins",
+          "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -625,189 +577,10 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "9c727020616afdd6ba786b8af206a90481f07db0ca175ed6a4cc5b7e01c66d06",
-          "name": "JumpButton",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "ButtonFSM",
-              "type": "ButtonStates::ButtonFSM",
-              "ShouldCheckHovering": true,
-              "State": "Idle",
-              "TouchId": 0,
-              "TouchIsInside": false,
-              "MouseIsInside": false,
-              "Index": 2.0247e-320
-            },
-            {
-              "name": "ButtonScaleTween",
-              "type": "ButtonStates::ButtonScaleTween",
-              "Scale": "Scale",
-              "ButtonFSM": "ButtonFSM",
-              "Tween": "Tween",
-              "IdleScale": 1.5,
-              "FocusedScale": 1.45,
-              "FadeInDuration": 0.05,
-              "FadeOutDuration": 0.1,
-              "PressedScale": 1.45,
-              "FadeInEasing": "easeInOutQuad",
-              "FadeOutEasing": "easeInOutQuad",
-              "PreviousState": "Idle"
-            },
-            {
-              "name": "MultitouchButton",
-              "type": "SpriteMultitouchJoystick::MultitouchButton",
-              "ControllerIdentifier": 1,
-              "ButtonIdentifier": "A",
-              "TouchId": 0,
-              "TouchIndex": 2.0247e-320,
-              "IsReleased": false
-            },
-            {
-              "name": "Tween",
-              "type": "Tween::TweenBehavior"
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.025,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "Top arrow button.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 40,
-                        "y": 40
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 80,
-                            "y": 0
-                          },
-                          {
-                            "x": 80,
-                            "y": 80
-                          },
-                          {
-                            "x": 0,
-                            "y": 80
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "e71bd69f896d6c7531b48c65ceb5da25071d4fbdeb518aeceecba8d21f34ed8d",
-          "name": "Joystick",
-          "type": "SpriteMultitouchJoystick::SpriteMultitouchJoystick",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {},
-          "childrenContent": {
-            "Border": {
-              "adaptCollisionMaskAutomatically": false,
-              "updateIfNotVisible": false,
-              "animations": [
-                {
-                  "name": "Idle",
-                  "useMultipleDirections": false,
-                  "directions": [
-                    {
-                      "looping": false,
-                      "timeBetweenFrames": 0.08,
-                      "sprites": [
-                        {
-                          "hasCustomCollisionMask": false,
-                          "image": "Flat dark joystick border.png",
-                          "points": [],
-                          "originPoint": {
-                            "name": "origine",
-                            "x": 0,
-                            "y": 0
-                          },
-                          "centerPoint": {
-                            "automatic": true,
-                            "name": "centre",
-                            "x": 0,
-                            "y": 0
-                          },
-                          "customCollisionMask": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            "Thumb": {
-              "adaptCollisionMaskAutomatically": false,
-              "updateIfNotVisible": false,
-              "animations": [
-                {
-                  "name": "Idle",
-                  "useMultipleDirections": false,
-                  "directions": [
-                    {
-                      "looping": false,
-                      "timeBetweenFrames": 0.08,
-                      "sprites": [
-                        {
-                          "hasCustomCollisionMask": false,
-                          "image": "Flat dark joystick thumb.png",
-                          "points": [],
-                          "originPoint": {
-                            "name": "origine",
-                            "x": 0,
-                            "y": 0
-                          },
-                          "centerPoint": {
-                            "automatic": true,
-                            "name": "centre",
-                            "x": 0,
-                            "y": 0
-                          },
-                          "customCollisionMask": []
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          }
-        },
-        {
           "assetStoreId": "",
           "height": 64,
           "name": "Platform_Ground",
+          "tags": "",
           "texture": "assets\\StartingGround.png",
           "type": "TiledSpriteObject::TiledSprite",
           "width": 64,
@@ -822,100 +595,8 @@
               "yGrabOffset": 0
             }
           ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "test",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "test",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "test",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 30,
-                            "y": 26
-                          },
-                          {
-                            "x": 39,
-                            "y": 26
-                          },
-                          {
-                            "x": 39,
-                            "y": 41
-                          },
-                          {
-                            "x": 30,
-                            "y": 41
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
-      "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": [
-          {
-            "objectName": "Platformer_Character"
-          },
-          {
-            "objectName": "Platform_Ground"
-          },
-          {
-            "objectName": "Background"
-          },
-          {
-            "objectName": "Coins"
-          },
-          {
-            "folderName": "Mobile Controls",
-            "children": [
-              {
-                "objectName": "Joystick"
-              },
-              {
-                "objectName": "JumpButton"
-              }
-            ]
-          },
-          {
-            "objectName": "test"
-          }
-        ]
-      },
       "events": [
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -966,7 +647,6 @@
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
@@ -983,7 +663,6 @@
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
@@ -1011,7 +690,6 @@
           "camera3DFarPlaneDistance": 10000,
           "camera3DFieldOfView": 45,
           "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
@@ -1123,8 +801,6 @@
         "gqDaZjCfevOOxBYkK6zlhtZnXCg1"
       ],
       "dependencies": [],
-      "globalVariables": [],
-      "sceneVariables": [],
       "eventsFunctions": [],
       "eventsBasedBehaviors": [
         {
@@ -2813,6 +2489,7 @@
               "extraInformation": [
                 "ButtonStates::ButtonFSM"
               ],
+              "hidden": false,
               "name": "ButtonFSM"
             },
             {
@@ -2824,6 +2501,7 @@
               "extraInformation": [
                 "EffectCapability::EffectBehavior"
               ],
+              "hidden": false,
               "name": "Effect"
             },
             {
@@ -2833,6 +2511,7 @@
               "description": "",
               "group": "Effects",
               "extraInformation": [],
+              "hidden": false,
               "name": "IdleEffect"
             },
             {
@@ -2842,6 +2521,7 @@
               "description": "The state is Focused when the button is hovered or held outside.",
               "group": "Effects",
               "extraInformation": [],
+              "hidden": false,
               "name": "FocusedEffect"
             },
             {
@@ -2851,6 +2531,7 @@
               "description": "",
               "group": "Effects",
               "extraInformation": [],
+              "hidden": false,
               "name": "PressedEffect"
             }
           ],
@@ -3273,6 +2954,7 @@
               "extraInformation": [
                 "AnimatableCapability::AnimatableBehavior"
               ],
+              "hidden": false,
               "name": "Animation"
             },
             {
@@ -3284,6 +2966,7 @@
               "extraInformation": [
                 "ButtonStates::ButtonFSM"
               ],
+              "hidden": false,
               "name": "ButtonFSM"
             },
             {
@@ -3293,6 +2976,7 @@
               "description": "",
               "group": "Animation",
               "extraInformation": [],
+              "hidden": false,
               "name": "IdleAnimationName"
             },
             {
@@ -3302,6 +2986,7 @@
               "description": "The state is Focused when the button is hovered or held outside.",
               "group": "Animation",
               "extraInformation": [],
+              "hidden": false,
               "name": "FocusedAnimationName"
             },
             {
@@ -3311,6 +2996,7 @@
               "description": "",
               "group": "Animation",
               "extraInformation": [],
+              "hidden": false,
               "name": "PressedAnimationName"
             }
           ],
@@ -4718,6 +4404,7 @@
               "extraInformation": [
                 "ButtonStates::ButtonFSM"
               ],
+              "hidden": false,
               "name": "ButtonFSM"
             },
             {
@@ -4729,6 +4416,7 @@
               "extraInformation": [
                 "EffectCapability::EffectBehavior"
               ],
+              "hidden": false,
               "name": "Effect"
             },
             {
@@ -4738,6 +4426,7 @@
               "description": "",
               "group": "Effect",
               "extraInformation": [],
+              "hidden": false,
               "name": "EffectName"
             },
             {
@@ -4747,6 +4436,7 @@
               "description": "The effect parameter names can be found in the effects tab with the \"Show parameter names\" action of the drop down menu.",
               "group": "Effect",
               "extraInformation": [],
+              "hidden": false,
               "name": "EffectProperty"
             },
             {
@@ -4756,6 +4446,7 @@
               "description": "",
               "group": "Value",
               "extraInformation": [],
+              "hidden": false,
               "name": "IdleValue"
             },
             {
@@ -4765,6 +4456,7 @@
               "description": "The state is Focused when the button is hovered or held outside.",
               "group": "Value",
               "extraInformation": [],
+              "hidden": false,
               "name": "FocusedValue"
             },
             {
@@ -4774,6 +4466,7 @@
               "description": "",
               "group": "Value",
               "extraInformation": [],
+              "hidden": false,
               "name": "PressedValue"
             },
             {
@@ -4817,6 +4510,7 @@
                 "easeFrom",
                 "easeTo"
               ],
+              "hidden": false,
               "name": "FadeInEasing"
             },
             {
@@ -4860,6 +4554,7 @@
                 "easeFrom",
                 "easeTo"
               ],
+              "hidden": false,
               "name": "FadeOutEasing"
             },
             {
@@ -4870,6 +4565,7 @@
               "description": "",
               "group": "Speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FadeInDuration"
             },
             {
@@ -4880,6 +4576,7 @@
               "description": "",
               "group": "Speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FadeOutDuration"
             },
             {
@@ -5910,6 +5607,7 @@
               "extraInformation": [
                 "ScalableCapability::ScalableBehavior"
               ],
+              "hidden": false,
               "name": "Scale"
             },
             {
@@ -5921,6 +5619,7 @@
               "extraInformation": [
                 "ButtonStates::ButtonFSM"
               ],
+              "hidden": false,
               "name": "ButtonFSM"
             },
             {
@@ -5932,6 +5631,7 @@
               "extraInformation": [
                 "Tween::TweenBehavior"
               ],
+              "hidden": false,
               "name": "Tween"
             },
             {
@@ -5942,6 +5642,7 @@
               "description": "",
               "group": "Size",
               "extraInformation": [],
+              "hidden": false,
               "name": "IdleScale"
             },
             {
@@ -5952,6 +5653,7 @@
               "description": "The state is Focused when the button is hovered or held outside.",
               "group": "Size",
               "extraInformation": [],
+              "hidden": false,
               "name": "FocusedScale"
             },
             {
@@ -5962,6 +5664,7 @@
               "description": "",
               "group": "Speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FadeInDuration"
             },
             {
@@ -5972,6 +5675,7 @@
               "description": "",
               "group": "Speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FadeOutDuration"
             },
             {
@@ -5982,6 +5686,7 @@
               "description": "",
               "group": "Size",
               "extraInformation": [],
+              "hidden": false,
               "name": "PressedScale"
             },
             {
@@ -6025,6 +5730,7 @@
                 "easeFrom",
                 "easeTo"
               ],
+              "hidden": false,
               "name": "FadeInEasing"
             },
             {
@@ -6068,6 +5774,7 @@
                 "easeFrom",
                 "easeTo"
               ],
+              "hidden": false,
               "name": "FadeOutEasing"
             },
             {
@@ -7058,6 +6765,7 @@
               "extraInformation": [
                 "ButtonStates::ButtonFSM"
               ],
+              "hidden": false,
               "name": "ButtonFSM"
             },
             {
@@ -7069,6 +6777,7 @@
               "extraInformation": [
                 "Tween::TweenBehavior"
               ],
+              "hidden": false,
               "name": "Tween"
             },
             {
@@ -7078,6 +6787,7 @@
               "description": "",
               "group": "Color",
               "extraInformation": [],
+              "hidden": false,
               "name": "IdleColorTint"
             },
             {
@@ -7087,6 +6797,7 @@
               "description": "The state is Focused when the button is hovered or held outside.",
               "group": "Color",
               "extraInformation": [],
+              "hidden": false,
               "name": "FocusedColorTint"
             },
             {
@@ -7096,6 +6807,7 @@
               "description": "",
               "group": "Color",
               "extraInformation": [],
+              "hidden": false,
               "name": "PressedColorTint"
             },
             {
@@ -7106,6 +6818,7 @@
               "description": "",
               "group": "Speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FadeInDuration"
             },
             {
@@ -7116,6 +6829,7 @@
               "description": "",
               "group": "Speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FadeOutDuration"
             },
             {
@@ -7159,6 +6873,7 @@
                 "easeFrom",
                 "easeTo"
               ],
+              "hidden": false,
               "name": "FadeInEasing"
             },
             {
@@ -7202,6 +6917,7 @@
                 "easeFrom",
                 "easeTo"
               ],
+              "hidden": false,
               "name": "FadeOutEasing"
             },
             {
@@ -7268,41 +6984,6 @@
         "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
       ],
       "dependencies": [],
-      "globalVariables": [],
-      "sceneVariables": [
-        {
-          "name": "Controllers",
-          "type": "array",
-          "children": [
-            {
-              "type": "structure",
-              "children": [
-                {
-                  "name": "Buttons",
-                  "type": "array",
-                  "children": [
-                    {
-                      "type": "structure",
-                      "children": [
-                        {
-                          "name": "State",
-                          "type": "string",
-                          "value": "Idle"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "name": "Joystick",
-                  "type": "structure",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        }
-      ],
       "eventsFunctions": [
         {
           "description": "Check if a button is pressed on a gamepad.",
@@ -9680,6 +9361,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "ControllerIdentifier"
             },
             {
@@ -9689,6 +9371,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "JoystickIdentifier"
             },
             {
@@ -9698,6 +9381,7 @@
               "description": "The deadzone is an area for which movement on sticks won't be taken into account (instead, the stick will be considered as not moved)",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "DeadZoneRadius"
             },
             {
@@ -10122,6 +9806,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "ControllerIdentifier"
             },
             {
@@ -10131,6 +9816,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "ButtonIdentifier"
             },
             {
@@ -10353,6 +10039,7 @@
               "extraInformation": [
                 "PlatformBehavior::PlatformerObjectBehavior"
               ],
+              "hidden": false,
               "name": "Property"
             },
             {
@@ -10362,6 +10049,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "ControllerIdentifier"
             },
             {
@@ -10374,6 +10062,7 @@
                 "Primary",
                 "Secondary"
               ],
+              "hidden": false,
               "name": "JoystickIdentifier"
             },
             {
@@ -10383,6 +10072,7 @@
               "description": "",
               "group": "Controls",
               "extraInformation": [],
+              "hidden": false,
               "name": "JumpButton"
             }
           ],
@@ -10911,6 +10601,7 @@
               "extraInformation": [
                 "TopDownMovementBehavior::TopDownMovementBehavior"
               ],
+              "hidden": false,
               "name": "TopDownMovement"
             },
             {
@@ -10920,6 +10611,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "ControllerIdentifier"
             },
             {
@@ -10932,6 +10624,7 @@
                 "Primary",
                 "Secondary"
               ],
+              "hidden": false,
               "name": "JoystickIdentifier"
             },
             {
@@ -10945,6 +10638,7 @@
                 "360°",
                 "8 Directions"
               ],
+              "hidden": false,
               "name": "StickMode"
             }
           ],
@@ -10953,16 +10647,9 @@
       ],
       "eventsBasedObjects": [
         {
-          "areaMaxX": 64,
-          "areaMaxY": 64,
-          "areaMaxZ": 64,
-          "areaMinX": 0,
-          "areaMinY": 0,
-          "areaMinZ": 0,
           "defaultName": "Joystick",
           "description": "Joystick for touchscreens.",
           "fullName": "Multitouch Joystick",
-          "isUsingLegacyInstancesRenderer": true,
           "name": "SpriteMultitouchJoystick",
           "eventsFunctions": [
             {
@@ -11855,6 +11542,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "ControllerIdentifier"
             },
             {
@@ -11867,6 +11555,7 @@
                 "Primary",
                 "Secondary"
               ],
+              "hidden": false,
               "name": "JoystickIdentifier"
             },
             {
@@ -11876,6 +11565,7 @@
               "description": "The deadzone is an area for which movement on sticks won't be taken into account (instead, the stick will be considered as not moved)",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "DeadZoneRadius"
             },
             {
@@ -11928,6 +11618,7 @@
               "adaptCollisionMaskAutomatically": false,
               "assetStoreId": "",
               "name": "Thumb",
+              "tags": "",
               "type": "Sprite",
               "updateIfNotVisible": false,
               "variables": [],
@@ -11951,6 +11642,7 @@
               "adaptCollisionMaskAutomatically": false,
               "assetStoreId": "",
               "name": "Border",
+              "tags": "",
               "type": "Sprite",
               "updateIfNotVisible": false,
               "variables": [],
@@ -11983,50 +11675,7 @@
                 }
               ]
             }
-          ],
-          "objectsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "objectName": "Thumb"
-              },
-              {
-                "objectName": "Border"
-              }
-            ]
-          },
-          "objectsGroups": [],
-          "layers": [
-            {
-              "ambientLightColorB": 200,
-              "ambientLightColorG": 200,
-              "ambientLightColorR": 200,
-              "camera3DFarPlaneDistance": 10000,
-              "camera3DFieldOfView": 45,
-              "camera3DNearPlaneDistance": 3,
-              "cameraType": "",
-              "followBaseLayerCamera": false,
-              "isLightingLayer": false,
-              "isLocked": false,
-              "name": "",
-              "renderingType": "",
-              "visibility": true,
-              "cameras": [
-                {
-                  "defaultSize": true,
-                  "defaultViewport": true,
-                  "height": 0,
-                  "viewportBottom": 1,
-                  "viewportLeft": 0,
-                  "viewportRight": 1,
-                  "viewportTop": 0,
-                  "width": 0
-                }
-              ],
-              "effects": []
-            }
-          ],
-          "instances": []
+          ]
         }
       ]
     },
@@ -12068,8 +11717,6 @@
         "IWykYNRvhCZBN3vEgKEbBPOR3Oc2"
       ],
       "dependencies": [],
-      "globalVariables": [],
-      "sceneVariables": [],
       "eventsFunctions": [],
       "eventsBasedBehaviors": [
         {
@@ -16559,6 +16206,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "LeftwardSpeed"
             },
             {
@@ -16568,6 +16216,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "RightwardSpeed"
             },
             {
@@ -16577,6 +16226,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "UpwardSpeed"
             },
             {
@@ -16586,6 +16236,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "DownwardSpeed"
             },
             {
@@ -16595,6 +16246,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "FollowOnX"
             },
             {
@@ -16604,6 +16256,7 @@
               "description": "",
               "group": "",
               "extraInformation": [],
+              "hidden": false,
               "name": "FollowOnY"
             },
             {
@@ -16614,7 +16267,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "FollowFreeAreaLeft"
             },
             {
@@ -16625,7 +16278,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "FollowFreeAreaRight"
             },
             {
@@ -16636,7 +16289,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "FollowFreeAreaTop"
             },
             {
@@ -16647,7 +16300,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "FollowFreeAreaBottom"
             },
             {
@@ -16658,7 +16311,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "CameraOffsetX"
             },
             {
@@ -16669,7 +16322,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "CameraOffsetY"
             },
             {
@@ -16680,7 +16333,7 @@
               "description": "",
               "group": "Timing",
               "extraInformation": [],
-              "deprecated": true,
+              "hidden": false,
               "name": "CameraDelay"
             },
             {
@@ -16691,7 +16344,7 @@
               "description": "",
               "group": "Timing",
               "extraInformation": [],
-              "deprecated": true,
+              "hidden": false,
               "name": "ForecastTime"
             },
             {
@@ -16702,7 +16355,7 @@
               "description": "",
               "group": "Timing",
               "extraInformation": [],
-              "deprecated": true,
+              "hidden": false,
               "name": "ForecastHistoryDuration"
             },
             {
@@ -16973,7 +16626,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "LeftwardSpeedMax"
             },
             {
@@ -16984,7 +16637,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "RightwardSpeedMax"
             },
             {
@@ -16995,7 +16648,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "UpwardSpeedMax"
             },
             {
@@ -17006,7 +16659,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
-              "advanced": true,
+              "hidden": false,
               "name": "DownwardSpeedMax"
             },
             {
@@ -17273,6 +16926,7 @@
               "extraInformation": [
                 "PlatformBehavior::PlatformerObjectBehavior"
               ],
+              "hidden": false,
               "name": "PlatformerCharacter"
             },
             {
@@ -17284,6 +16938,7 @@
               "extraInformation": [
                 "SmoothCamera::SmoothCamera"
               ],
+              "hidden": false,
               "name": "SmoothCamera"
             },
             {
@@ -17304,6 +16959,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
+              "hidden": false,
               "name": "AirFollowFreeAreaTop"
             },
             {
@@ -17314,6 +16970,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
+              "hidden": false,
               "name": "AirFollowFreeAreaBottom"
             },
             {
@@ -17324,6 +16981,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
+              "hidden": false,
               "name": "FloorFollowFreeAreaTop"
             },
             {
@@ -17334,6 +16992,7 @@
               "description": "",
               "group": "Position",
               "extraInformation": [],
+              "hidden": false,
               "name": "FloorFollowFreeAreaBottom"
             },
             {
@@ -17343,6 +17002,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "AirUpwardSpeed"
             },
             {
@@ -17352,6 +17012,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "AirDownwardSpeed"
             },
             {
@@ -17361,6 +17022,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FloorUpwardSpeed"
             },
             {
@@ -17370,6 +17032,7 @@
               "description": "",
               "group": "Catch-up speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FloorDownwardSpeed"
             },
             {
@@ -17380,6 +17043,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "AirUpwardSpeedMax"
             },
             {
@@ -17390,6 +17054,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "AirDownwardSpeedMax"
             },
             {
@@ -17400,6 +17065,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FloorUpwardSpeedMax"
             },
             {
@@ -17410,6 +17076,7 @@
               "description": "",
               "group": "Maximum speed",
               "extraInformation": [],
+              "hidden": false,
               "name": "FloorDownwardSpeedMax"
             }
           ],
@@ -17419,5 +17086,6 @@
       "eventsBasedObjects": []
     }
   ],
-  "externalLayouts": []
+  "externalLayouts": [],
+  "externalSourceFiles": []
 }
