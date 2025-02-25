@@ -168,6 +168,14 @@
         "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/test.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "test",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -214,8 +222,8 @@
           "name": "Platformer_Character",
           "persistentUuid": "4ded1d81-e820-41d3-868a-3f314e5850bd",
           "width": 79,
-          "x": 142,
-          "y": 241,
+          "x": 114,
+          "y": 223,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -382,6 +390,22 @@
           "x": 1088,
           "y": 352,
           "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "test",
+          "persistentUuid": "73b428a3-56d8-45d5-8295-dee2f393b7f3",
+          "width": 0,
+          "x": 515,
+          "y": 197,
+          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -798,6 +822,67 @@
               "yGrabOffset": 0
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "test",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "test",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "test",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 30,
+                            "y": 26
+                          },
+                          {
+                            "x": 39,
+                            "y": 26
+                          },
+                          {
+                            "x": 39,
+                            "y": 41
+                          },
+                          {
+                            "x": 30,
+                            "y": 41
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -825,6 +910,9 @@
                 "objectName": "JumpButton"
               }
             ]
+          },
+          {
+            "objectName": "test"
           }
         ]
       },
