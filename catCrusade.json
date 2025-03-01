@@ -272,6 +272,14 @@
         "name": "NewSprite",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite2",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -340,11 +348,11 @@
           "JumpButton": "A"
         },
         {
-          "canGrabPlatforms": true,
-          "canGrabWithoutMoving": false,
           "isFolded": true,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "canGrabPlatforms": true,
+          "canGrabWithoutMoving": false,
           "deceleration": 2000,
           "ignoreDefaultControls": true,
           "acceleration": 1000,
@@ -538,9 +546,9 @@
       "effects": [],
       "behaviors": [
         {
-          "canBeGrabbed": true,
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": true,
           "platformType": "NormalPlatform",
           "yGrabOffset": 0
         }
@@ -603,6 +611,8 @@
           "PercentDamageReduction": 0
         },
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior",
           "acceleration": 400,
           "allowDiagonals": true,
           "angleOffset": 0,
@@ -613,12 +623,13 @@
           "gridOffsetX": 0,
           "gridOffsetY": 0,
           "maxSpeed": 320,
-          "name": "Pathfinding",
           "rotateObject": false,
-          "smoothingMaxCellGap": 1,
-          "type": "PathfindingBehavior::PathfindingBehavior"
+          "smoothingMaxCellGap": 1
         },
         {
+          "isFolded": true,
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
           "canGrabPlatforms": false,
@@ -626,15 +637,12 @@
           "deceleration": 1500,
           "gravity": 1000,
           "ignoreDefaultControls": true,
-          "isFolded": true,
           "jumpSpeed": 600,
           "jumpSustainTime": 0,
           "ladderClimbingSpeed": 150,
           "maxFallingSpeed": 700,
           "maxSpeed": 250,
-          "name": "PlatformerObject",
           "slopeMaxAngle": 60,
-          "type": "PlatformBehavior::PlatformerObjectBehavior",
           "useLegacyTrajectory": false,
           "xGrabTolerance": 10,
           "yGrabOffset": 0
@@ -661,8 +669,8 @@
                     },
                     {
                       "name": "cliffChecker",
-                      "x": 91.5,
-                      "y": 71.5
+                      "x": 77,
+                      "y": 65.5
                     }
                   ],
                   "originPoint": {
@@ -1333,16 +1341,32 @@
           "type": "EffectCapability::EffectBehavior"
         },
         {
+          "name": "FlashColor",
+          "type": "Flash::FlashColor"
+        },
+        {
           "name": "Flippable",
           "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health"
         },
         {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
         },
         {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack"
         },
         {
           "name": "PlatformerMultitouchMapper",
@@ -1455,8 +1479,8 @@
           "name": "enemy1",
           "persistentUuid": "2171a440-c7b1-44fb-96fc-0f851dfb5cbb",
           "width": 0,
-          "x": 290,
-          "y": 302,
+          "x": 1139,
+          "y": 48,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1505,9 +1529,9 @@
           "layer": "",
           "name": "NewSprite",
           "persistentUuid": "59b6a7d5-a747-4237-8436-0641ecefbcae",
-          "width": 324,
-          "x": 166,
-          "y": 420,
+          "width": 545,
+          "x": 872,
+          "y": 133,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -1515,16 +1539,85 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
-          "name": "enemy1",
-          "persistentUuid": "fa1f81ed-deac-4e61-9806-84492ed70955",
-          "width": 0,
-          "x": 975,
-          "y": 333,
-          "zOrder": 4,
+          "name": "Platform_Ground",
+          "persistentUuid": "b5dd0d77-84f0-4aa4-919f-302c5730eec0",
+          "width": 147,
+          "x": -608,
+          "y": 415,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "5ce1109a-14c4-444f-a89b-294944703cc7",
+          "width": 147,
+          "x": -1185,
+          "y": 614,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "06a7740c-ffb5-4ba9-976c-43336be49d5c",
+          "width": 147,
+          "x": -1754,
+          "y": 411,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "7f3d81aa-e4e1-4811-bb8b-3636cea889b3",
+          "width": 147,
+          "x": -2360,
+          "y": 220,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "0c225c4b-2d36-49e2-8867-7e3dec40d748",
+          "width": 147,
+          "x": -424,
+          "y": 118,
+          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1541,10 +1634,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": true,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": true,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -1599,6 +1692,48 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "air",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite2",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1606,6 +1741,9 @@
         "children": [
           {
             "objectName": "NewSprite"
+          },
+          {
+            "objectName": "air"
           }
         ]
       },
@@ -2430,6 +2568,17 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsObjectOnGivenFloor"
+              },
+              "parameters": [
+                "enemy1",
+                "PlatformerObject",
+                "NewSprite",
+                ""
+              ]
+            },
             {
               "type": {
                 "inverted": true,
