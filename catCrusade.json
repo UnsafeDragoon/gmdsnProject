@@ -792,7 +792,7 @@
       {
         "file": "assets/Star Gold.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/Star Gold.png\",\"extension\":\".png\"}",
         "name": "Star Gold.png",
         "smoothed": true,
         "userAdded": false,
@@ -810,6 +810,41 @@
         "origin": {
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Score counters/assets/a8c7c959ab7f3dbb0fcf98d5355fb8839186d33f3c9d7203ef20450fa5a72091_JotiOne-Regular.ttf",
           "name": "JotiOne-Regular.ttf"
+        }
+      },
+      {
+        "file": "assets/Industrial narrow ladder.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Industrial narrow ladder.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Industrial Platformer Pack (110 assets)/PNG/Retina/5f37de108e29cda20e2c232e988876fa511937ccdbdcad575bcfdf09a72e9813_Industrial narrow ladder.png",
+          "name": "Industrial narrow ladder.png"
+        }
+      },
+      {
+        "file": "assets/Dragon.glb",
+        "kind": "model3D",
+        "metadata": "",
+        "name": "Dragon.glb",
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/3D Colorful Monsters/Flying/356ad6a400d222e4b893f79525b93a9e20f4642449460e9d37d76cbb9d137f6d_Dragon.glb",
+          "name": "Dragon.glb"
+        }
+      },
+      {
+        "file": "assets/Emote Cross.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Emote Cross.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Emotes/Pixel art/Emote/da2bc0c2e6ec238b0810423efda4999fccd1edbb621e7b40dbb13acae42d05bf_Emote Cross.png",
+          "name": "Emote Cross.png"
         }
       }
     ],
@@ -916,10 +951,10 @@
           "JumpButton": "A"
         },
         {
-          "gravity": 1200,
           "isFolded": true,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "gravity": 1200,
           "canGrabPlatforms": true,
           "canGrabWithoutMoving": false,
           "deceleration": 2000,
@@ -2247,7 +2282,7 @@
       ]
     },
     {
-      "adaptCollisionMaskAutomatically": true,
+      "adaptCollisionMaskAutomatically": false,
       "assetStoreId": "78096b69182f7f45e938180b1c3d8215bf67927509120cdb4c15e13befd3bbb6",
       "name": "BowlingBallBlue",
       "type": "Sprite",
@@ -2271,7 +2306,7 @@
           "vertices": [],
           "density": 1,
           "friction": 0.1,
-          "restitution": 0.005,
+          "restitution": 0.0005,
           "linearDamping": 0.1,
           "angularDamping": 0.1,
           "gravityScale": 1,
@@ -2329,6 +2364,176 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "d071c8baaa781a445ba1c3742b300714155d61cfc7423a04ae29c282014dcee7",
+      "name": "ScoreCounter",
+      "type": "ScoreCounter::ScoreCounter",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 0,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "type": "AnchorBehavior::AnchorBehavior",
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "content": {},
+      "childrenContent": {
+        "Background": {
+          "bottomMargin": 30,
+          "height": 64,
+          "leftMargin": 30,
+          "rightMargin": 30,
+          "texture": "Group 12.png",
+          "tiled": true,
+          "topMargin": 30,
+          "width": 64
+        },
+        "Counter": {
+          "bold": true,
+          "italic": true,
+          "smoothed": true,
+          "underlined": false,
+          "string": "0",
+          "font": "JotiOne-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 30,
+          "color": {
+            "b": 0,
+            "g": 231,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": true,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 10,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "0",
+            "font": "JotiOne-Regular.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "characterSize": 30,
+            "color": "255;231;0"
+          }
+        },
+        "Icon": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Star Gold",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Star Gold.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 23,
+                        "y": 23
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "adaptCollisionMaskAutomatically": true,
+      "assetStoreId": "1973f1db72dfe621cd1bee710a604cb3aeb4513642da6c0d7acfd410a97c5074",
+      "name": "EmoteCross",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "active",
+          "type": "boolean",
+          "value": false
+        }
+      ],
+      "effects": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.025,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Emote Cross.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 4,
+                        "y": 3
+                      },
+                      {
+                        "x": 12,
+                        "y": 3
+                      },
+                      {
+                        "x": 12,
+                        "y": 10
+                      },
+                      {
+                        "x": 4,
+                        "y": 10
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "objectsFolderStructure": {
@@ -2338,10 +2543,16 @@
         "folderName": "playerAndNPCs",
         "children": [
           {
+            "objectName": "EmoteCross"
+          },
+          {
             "objectName": "Platformer_Character"
           },
           {
             "objectName": "enemy1"
+          },
+          {
+            "objectName": "ScoreCounter"
           }
         ]
       },
@@ -4181,7 +4392,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.392516117548823,
+        "zoomFactor": 0.3111974942445208,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4231,8 +4442,8 @@
           "name": "Platform_Ground",
           "persistentUuid": "1e2a5b5c-1b38-48f0-80fb-258d8db898e8",
           "width": 1007,
-          "x": -16,
-          "y": 470,
+          "x": -30,
+          "y": 436,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4248,25 +4459,25 @@
           "name": "Platform_Ground",
           "persistentUuid": "8be4b1bd-417b-418f-9c27-2e85bd8d046e",
           "width": 770,
-          "x": 562,
-          "y": 261,
+          "x": 560,
+          "y": 234,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
-          "angle": 16,
+          "angle": 10,
           "customSize": true,
           "depth": 1,
-          "height": 40,
+          "height": 36,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
           "persistentUuid": "c3314014-3008-447f-9d67-729f0c1d0202",
-          "width": 538,
-          "x": 344,
-          "y": 75,
+          "width": 777,
+          "x": -20,
+          "y": 39,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4283,7 +4494,7 @@
           "persistentUuid": "6865079c-bdb3-4f30-8e8f-2e34021ce213",
           "width": 293,
           "x": 307,
-          "y": 337,
+          "y": 300,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -4298,25 +4509,9 @@
           "name": "Platformer_Character",
           "persistentUuid": "de5c2631-ccee-47db-8dc8-d8d399168bfa",
           "width": 0,
-          "x": 579,
-          "y": -14,
+          "x": 571,
+          "y": -279,
           "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "BowlingBallBlue",
-          "persistentUuid": "7260415d-9048-4172-af8c-a7c6540f86c4",
-          "width": 0,
-          "x": 752,
-          "y": -31,
-          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4331,7 +4526,7 @@
           "name": "Platform_Ground",
           "persistentUuid": "033616f2-36cd-414e-962e-c55bf9403b05",
           "width": 984,
-          "x": -516,
+          "x": -501,
           "y": 212,
           "zOrder": 1,
           "numberProperties": [],
@@ -4376,7 +4571,7 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
+          "layer": "UI",
           "name": "ScoreCounter",
           "persistentUuid": "85535505-c554-41b7-944f-ca407578fc49",
           "width": 0,
@@ -4386,107 +4581,174 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 40,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "0f088ce4-0629-4800-a9c8-f51ed2331303",
+          "width": 538,
+          "x": 343,
+          "y": -187,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "IndustrialNarrowLadder",
+          "persistentUuid": "9f186ecf-b9c7-4685-b1ac-fe190c27ddcf",
+          "width": 0,
+          "x": 297,
+          "y": 176,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 111,
+          "keepRatio": true,
+          "layer": "",
+          "name": "IndustrialNarrowLadder",
+          "persistentUuid": "b07f2ac3-d3db-4b76-9523-67b09021d361",
+          "width": 140,
+          "x": 713,
+          "y": 237,
+          "zOrder": 7,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "IndustrialNarrowLadder",
+          "persistentUuid": "616655ea-8ed8-471b-9f7a-471d2f81bc7d",
+          "width": 0,
+          "x": 713,
+          "y": 343,
+          "zOrder": 8,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "IndustrialNarrowLadder",
+          "persistentUuid": "3ff7d41e-c069-4709-82ea-4bea63224dbc",
+          "width": 0,
+          "x": 297,
+          "y": 46,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 181,
+          "keepRatio": true,
+          "layer": "",
+          "name": "EmoteCross",
+          "persistentUuid": "aeaeba3b-1263-4fe2-9edf-73da93bcc0c0",
+          "width": 181,
+          "x": 896,
+          "y": -240,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
         {
-          "assetStoreId": "d071c8baaa781a445ba1c3742b300714155d61cfc7423a04ae29c282014dcee7",
-          "name": "ScoreCounter",
-          "type": "ScoreCounter::ScoreCounter",
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "59c054d9eb500c8b6ce84b14e13b4e3618d7a5b227af7cf86e7b46a84e7aefb7",
+          "name": "IndustrialNarrowLadder",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "content": {},
-          "childrenContent": {
-            "Background": {
-              "bottomMargin": 30,
-              "height": 64,
-              "leftMargin": 30,
-              "rightMargin": 30,
-              "texture": "Group 12.png",
-              "tiled": true,
-              "topMargin": 30,
-              "width": 64
-            },
-            "Counter": {
-              "bold": true,
-              "italic": true,
-              "smoothed": true,
-              "underlined": false,
-              "string": "0",
-              "font": "JotiOne-Regular.ttf",
-              "textAlignment": "left",
-              "characterSize": 30,
-              "color": {
-                "b": 0,
-                "g": 231,
-                "r": 255
-              },
-              "content": {
-                "bold": true,
-                "isOutlineEnabled": true,
-                "isShadowEnabled": false,
-                "italic": true,
-                "outlineColor": "0;0;0",
-                "outlineThickness": 10,
-                "shadowAngle": 90,
-                "shadowBlurRadius": 2,
-                "shadowColor": "0;0;0",
-                "shadowDistance": 4,
-                "shadowOpacity": 127,
-                "smoothed": true,
-                "underlined": false,
-                "text": "0",
-                "font": "JotiOne-Regular.ttf",
-                "textAlignment": "left",
-                "verticalTextAlignment": "center",
-                "characterSize": 30,
-                "color": "255;231;0"
-              }
-            },
-            "Icon": {
-              "adaptCollisionMaskAutomatically": false,
-              "updateIfNotVisible": false,
-              "animations": [
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
                 {
-                  "name": "",
-                  "useMultipleDirections": false,
-                  "directions": [
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
                     {
-                      "looping": true,
-                      "timeBetweenFrames": 0.025,
-                      "sprites": [
-                        {
-                          "hasCustomCollisionMask": false,
-                          "image": "Star Gold.png",
-                          "points": [],
-                          "originPoint": {
-                            "name": "origine",
-                            "x": 23,
-                            "y": 23
-                          },
-                          "centerPoint": {
-                            "automatic": false,
-                            "name": "centre",
-                            "x": 0,
+                      "hasCustomCollisionMask": true,
+                      "image": "Industrial narrow ladder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 20,
                             "y": 0
                           },
-                          "customCollisionMask": []
-                        }
+                          {
+                            "x": 120,
+                            "y": 0
+                          },
+                          {
+                            "x": 120,
+                            "y": 140
+                          },
+                          {
+                            "x": 20,
+                            "y": 140
+                          }
+                        ]
                       ]
                     }
                   ]
                 }
               ]
             }
-          }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "ScoreCounter"
+            "objectName": "IndustrialNarrowLadder"
           }
         ]
       },
@@ -4503,7 +4765,27 @@
               ]
             }
           ],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                ".1"
+              ]
+            },
+            {
+              "type": {
+                "value": "ScoreCounter::ScoreCounter::SetScore"
+              },
+              "parameters": [
+                "ScoreCounter",
+                "=",
+                "Platformer_Character.FireBullet::AmmoQuantity()",
+                ""
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -4556,8 +4838,642 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": true,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
+        },
+        {
+          "name": "FlashColor",
+          "type": "Flash::FlashColor"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 0,
+          "gravityY": 9.8,
+          "worldScale": 100,
+          "scaleX": 100,
+          "scaleY": 100
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack"
+        },
+        {
+          "name": "PlatformerMultitouchMapper",
+          "type": "SpriteMultitouchJoystick::PlatformerMultitouchMapper"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "LevelTwo",
+      "name": "LevelTwo",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.21607397323875457,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "e6a349b6-fc11-49e6-9d77-d1701c92a5a7",
+          "width": 334,
+          "x": 978,
+          "y": 579,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "depth": 1,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "1d43543a-85a9-478c-8bd0-d9a7e0392d51",
+          "width": 2252,
+          "x": 293,
+          "y": -428,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "depth": 1,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "de8656f0-6a0a-4587-ab1c-c2a4117d4b44",
+          "width": 2252,
+          "x": -1146,
+          "y": -430,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 44,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "1e1747e0-c9ed-44d0-be04-11b05152643a",
+          "width": 1485,
+          "x": -38,
+          "y": 704,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "71b166d9-5315-47e7-abc9-ce1024791324",
+          "width": 334,
+          "x": 514,
+          "y": 444,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "bcdb8cef-1523-4f0b-bf88-1d75e774b528",
+          "width": 334,
+          "x": 166,
+          "y": 294,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "0969170a-abc7-4cf9-8696-96e4f2cacef5",
+          "width": 223,
+          "x": 21,
+          "y": 136,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "f1331d3b-e7b8-422d-94ba-38f59f8f9c19",
+          "width": 223,
+          "x": 519,
+          "y": 133,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "50b27114-fe9a-4ad1-b2b7-6a6eefb4f0e8",
+          "width": 223,
+          "x": 259,
+          "y": -34,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "e34eb5db-3764-4b79-bd8e-bca4998a9527",
+          "width": 223,
+          "x": 800,
+          "y": -8,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "ba09429f-2111-40a4-a470-75a6141cb582",
+          "width": 223,
+          "x": 1111,
+          "y": -168,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "54ffc589-1114-431b-9de9-eb9ac93da912",
+          "width": 223,
+          "x": -2,
+          "y": -179,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "1bd822d1-058c-4ba0-a4e2-1936d5b99aaa",
+          "width": 223,
+          "x": 810,
+          "y": -325,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "080c3f54-3058-4d86-932c-4c343b0d9f20",
+          "width": 223,
+          "x": 222,
+          "y": -335,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "abbd31e2-b80e-42e2-b452-d45170e0f763",
+          "width": 223,
+          "x": 538,
+          "y": -453,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "03092e45-d4fb-43e8-83b3-d12b5403299e",
+          "width": 223,
+          "x": 826,
+          "y": -577,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "4591df55-9932-4191-a5c0-67319e9d0a46",
+          "width": 223,
+          "x": 241,
+          "y": -610,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "ce19a337-66b5-4acd-8545-5d6eb7d7a68d",
+          "width": 223,
+          "x": 586,
+          "y": -770,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "5348724f-ccdf-427b-a10e-d026bc8e2006",
+          "width": 223,
+          "x": 1131,
+          "y": -748,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "6c254f96-f542-4864-b91d-b98df5cc547c",
+          "width": 223,
+          "x": 591,
+          "y": -1029,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "3c3b248d-1b95-4f9c-928f-74fd586c3a41",
+          "width": 223,
+          "x": 927,
+          "y": -929,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "305a7e4c-3cca-47e6-9f22-980d2e384cf5",
+          "width": 223,
+          "x": 319,
+          "y": -1163,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "d34ef9f5-b79a-4e21-a19e-281114c7ffa2",
+          "width": 223,
+          "x": 850,
+          "y": -1204,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "cbfc0923-68f7-4773-b34a-01e824bcc582",
+          "width": 223,
+          "x": 111,
+          "y": -859,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "5c1ef0be-8a4d-4e6b-b172-9d43496c1410",
+          "width": 223,
+          "x": 1111,
+          "y": -1351,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 45,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "2096e57a-33d2-43c1-87ad-24bdf685f4ed",
+          "width": 646,
+          "x": 378,
+          "y": -1549,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "events": [],
       "layers": [
         {
           "ambientLightColorB": 200,
@@ -4605,6 +5521,151 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FireBullet",
+          "type": "FireBullet::FireBullet"
+        },
+        {
+          "name": "FlashColor",
+          "type": "Flash::FlashColor"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Health",
+          "type": "Health::Health"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Pathfinding",
+          "type": "PathfindingBehavior::PathfindingBehavior"
+        },
+        {
+          "name": "Physics2",
+          "type": "Physics2::Physics2Behavior",
+          "gravityX": 0,
+          "gravityY": 9.8,
+          "worldScale": 100,
+          "scaleX": 100,
+          "scaleY": 100
+        },
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior"
+        },
+        {
+          "name": "PlatformerConfigurationStack",
+          "type": "AdvancedJump::PlatformerConfigurationStack"
+        },
+        {
+          "name": "PlatformerMultitouchMapper",
+          "type": "SpriteMultitouchJoystick::PlatformerMultitouchMapper"
+        },
+        {
+          "name": "PlatformerObject",
+          "type": "PlatformBehavior::PlatformerObjectBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "SmoothCamera",
+          "type": "SmoothCamera::SmoothCamera"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "Level_323",
+      "name": "Level 3",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {},
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [],
+      "objects": [],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT"
+      },
+      "events": [],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior"
+        },
         {
           "name": "Animation",
           "type": "AnimatableCapability::AnimatableBehavior"
@@ -4703,7 +5764,61 @@
               },
               "parameters": [
                 "",
+                "\"u\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "Platformer_Character.PointX(\"Xplayer\")",
+                "Platformer_Character.PointY(\"Yplayer\")",
+                "EmoteCross",
+                "Platformer_Character.PointX(\"Xplayer\")",
+                "Platformer_Character.PointY(\"Yplayer\")",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "EmoteCross",
+                "active",
+                "Toggle",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
                 "\"w\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "EmoteCross",
+                "active",
+                "False",
+                ""
               ]
             }
           ],
@@ -4724,11 +5839,30 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "",
-                "\"a\""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "EmoteCross",
+                    "active",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"a\""
+                  ]
+                }
               ]
             }
           ],
@@ -4777,6 +5911,17 @@
                 "",
                 "\"s\""
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "EmoteCross",
+                "active",
+                "False",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -4801,6 +5946,17 @@
               "parameters": [
                 "",
                 "\"d\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "EmoteCross",
+                "active",
+                "False",
+                ""
               ]
             }
           ],
@@ -4848,6 +6004,17 @@
               "parameters": [
                 "",
                 "\"Space\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "EmoteCross",
+                "active",
+                "False",
+                ""
               ]
             },
             {
@@ -5126,6 +6293,17 @@
                     "",
                     "\"d\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "EmoteCross",
+                    "active",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -5152,6 +6330,17 @@
                   "parameters": [
                     "",
                     "\"a\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "EmoteCross",
+                    "active",
+                    "False",
+                    ""
                   ]
                 }
               ],
@@ -5229,11 +6418,31 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "",
-                "\"k\""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"k\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::AmmoQuantity"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "FireBullet",
+                    ">",
+                    "0",
+                    ""
+                  ]
+                }
               ]
             },
             {
@@ -5285,6 +6494,40 @@
                 "BowlingBallBlue",
                 "Platformer_Character.playerAngle",
                 "500",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResizableCapability::ResizableBehavior::SetSize"
+              },
+              "parameters": [
+                "BowlingBallBlue",
+                "Resizable",
+                "35",
+                "35"
+              ]
+            },
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "-",
+                "1",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ScoreCounter::ScoreCounter::SetScore"
+              },
+              "parameters": [
+                "ScoreCounter",
+                "-",
+                "1",
                 ""
               ]
             }
@@ -5342,6 +6585,24 @@
               ]
             }
           ],
+          "actions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "=",
+                "15",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
           "actions": []
         }
       ]
