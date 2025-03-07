@@ -4679,7 +4679,13 @@
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
-          "initialVariables": []
+          "initialVariables": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "value": false
+            }
+          ]
         }
       ],
       "objects": [
@@ -5792,7 +5798,17 @@
               "parameters": [
                 "EmoteCross",
                 "active",
-                "Toggle",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerObject",
                 ""
               ]
             }
@@ -6440,6 +6456,17 @@
                     "FireBullet",
                     ">",
                     "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "EmoteCross",
+                    "active",
+                    "True",
                     ""
                   ]
                 }
