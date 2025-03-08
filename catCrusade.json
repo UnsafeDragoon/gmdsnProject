@@ -2330,8 +2330,8 @@
         },
         {
           "name": "Platform",
-          "platformType": "Jumpthru",
           "type": "PlatformBehavior::PlatformBehavior",
+          "platformType": "Jumpthru",
           "canBeGrabbed": true,
           "yGrabOffset": 0
         }
@@ -2412,10 +2412,10 @@
         },
         {
           "isFolded": true,
-          "jumpSpeed": 650,
-          "maxSpeed": 225,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "jumpSpeed": 650,
+          "maxSpeed": 225,
           "deceleration": 5000,
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
@@ -2920,6 +2920,11 @@
           "name": "active",
           "type": "boolean",
           "value": true
+        },
+        {
+          "name": "onScreen",
+          "type": "number",
+          "value": 0
         }
       ],
       "effects": [],
@@ -5480,7 +5485,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7892701941201083,
+        "zoomFactor": 0.6257549581043972,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5960,10 +5965,10 @@
           "effects": [],
           "behaviors": [
             {
-              "canBeGrabbed": false,
               "name": "Platform",
-              "platformType": "NormalPlatform",
               "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
               "yGrabOffset": 0
             }
           ],
@@ -6548,7 +6553,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.17708595277543906,
+        "zoomFactor": 0.20220707303601904,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -7328,6 +7333,17 @@
                     "",
                     "\"u\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "crossHair",
+                    "<",
+                    "1"
+                  ]
                 }
               ]
             },
@@ -7352,17 +7368,13 @@
           "actions": [
             {
               "type": {
-                "value": "FireBullet::FireBullet::FireTowardPosition"
+                "value": "Create"
               },
               "parameters": [
-                "Platformer_Character",
-                "FireBullet",
-                "500",
-                "0",
+                "",
                 "crossHair",
-                "0",
-                "0",
-                "0",
+                "Platformer_Character.PointX(\"attack\")",
+                "Platformer_Character.PointY(\"attack\")",
                 ""
               ]
             },
@@ -7501,67 +7513,191 @@
                 ""
               ]
             }
-          ],
-          "events": [
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
                 {
                   "type": {
-                    "value": "BooleanObjectVariable"
+                    "value": "KeyFromTextPressed"
                   },
                   "parameters": [
-                    "crossHair",
-                    "active",
-                    "=",
-                    ""
+                    "",
+                    "\"u\""
                   ]
-                }
-              ],
-              "actions": [
+                },
                 {
                   "type": {
-                    "value": "ScoreCounter::ScoreCounter::SetScore"
+                    "value": "SceneInstancesCount"
                   },
                   "parameters": [
-                    "ScoreCounter",
+                    "",
+                    "crossHair",
                     "=",
-                    "-1000",
-                    ""
+                    "1"
                   ]
                 }
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "crossHair",
-                    "active",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ScoreCounter::ScoreCounter::SetScore"
-                  },
-                  "parameters": [
-                    "ScoreCounter",
-                    "=",
-                    "1000",
-                    ""
-                  ]
-                }
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "killedNpc",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::FireTowardPosition"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "500",
+                "0",
+                "crossHair",
+                "0",
+                "0",
+                "0",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerObject",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerConfigurationStack",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerMultitouchMapper",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "SmoothCamera",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "SmoothCamera",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "PlatformerObject",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "PlatformerMultitouchMapper",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "SmoothCamera",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "PlatformerConfigurationStack",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "CentreCamera"
+              },
+              "parameters": [
+                "",
+                "Platformer_Character",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "crossHair",
+                ""
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -8382,7 +8518,7 @@
       ]
     },
     {
-      "associatedLayout": "Game Scene",
+      "associatedLayout": "mainLevel",
       "name": "crossHairMovement",
       "events": [
         {
@@ -8502,11 +8638,30 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "",
-                "\"u\""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"u\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SceneInstancesCount"
+                  },
+                  "parameters": [
+                    "",
+                    "crossHair",
+                    "=",
+                    "1"
+                  ]
+                }
               ]
             }
           ],
@@ -8525,8 +8680,141 @@
                 "0",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerObject",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerConfigurationStack",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "SmoothCamera",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "PlatformerMultitouchMapper",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "SmoothCamera",
+                "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "PlatformerObject",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "PlatformerMultitouchMapper",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "SmoothCamera",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "crossHair",
+                "PlatformerConfigurationStack",
+                "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "CentreCamera"
+              },
+              "parameters": [
+                "",
+                "Platformer_Character",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "crossHair",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                ".2"
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "FireBurst",
+                ""
+              ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
