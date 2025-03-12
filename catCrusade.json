@@ -2695,6 +2695,7 @@
       "effects": [],
       "behaviors": [
         {
+          "isFolded": true,
           "name": "Physics2",
           "type": "Physics2::Physics2Behavior",
           "bodyType": "Static",
@@ -2718,9 +2719,9 @@
           "masks": 1
         },
         {
+          "canBeGrabbed": false,
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior",
-          "canBeGrabbed": true,
           "platformType": "NormalPlatform",
           "yGrabOffset": 0
         }
@@ -5545,7 +5546,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6468556218410235,
+        "zoomFactor": 0.6053426056308917,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5671,23 +5672,6 @@
           "x": 1174,
           "y": 37,
           "zOrder": 67,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 16,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "0f088ce4-0629-4800-a9c8-f51ed2331303",
-          "width": 349,
-          "x": 458,
-          "y": 121,
-          "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5965,6 +5949,38 @@
           "x": 120,
           "y": 58,
           "zOrder": 75,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 16,
+          "layer": "UI",
+          "name": "Platform_Ground2",
+          "persistentUuid": "8d237372-087e-454c-aef8-6e44b181b602",
+          "width": 349,
+          "x": 448,
+          "y": 120,
+          "zOrder": 76,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "tutorial",
+          "persistentUuid": "89a8c776-f6f5-42e2-a1e7-80191412d09c",
+          "width": 0,
+          "x": 50,
+          "y": 307,
+          "zOrder": 77,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6351,6 +6367,48 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "tutorial",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "WASD- Move\nSpace- Jump\nK- fire fireball\nU- Aim fire breath",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "WASD- Move\nSpace- Jump\nK- fire fireball\nU- Aim fire breath",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "255;255;255"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -6379,6 +6437,9 @@
           },
           {
             "objectName": "invisibleWall"
+          },
+          {
+            "objectName": "tutorial"
           }
         ]
       },
@@ -6614,6 +6675,10 @@
         {
           "name": "SmoothCamera",
           "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
           "name": "TopDownMovement",
@@ -9864,7 +9929,6 @@
         },
         {
           "disabled": true,
-          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -10412,7 +10476,7 @@
                 "enemy1",
                 "PlatformerObject",
                 "=",
-                "250 + (difficultyMultiplier*15)"
+                "250 + (difficultyMultiplier*80)"
               ]
             }
           ]
@@ -11357,6 +11421,18 @@
                 "enemy1",
                 "PlatformerObject",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "dafb79fda1449ac80c3d42b10691c1d256b37728cb0a7f2b86fb1597632f3ce2_Scream 2.aac",
+                "",
+                "100",
+                "1"
               ]
             },
             {
