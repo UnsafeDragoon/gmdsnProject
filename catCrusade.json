@@ -4129,6 +4129,110 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "d071c8baaa781a445ba1c3742b300714155d61cfc7423a04ae29c282014dcee7",
+      "name": "levelCounter",
+      "type": "ScoreCounter::ScoreCounter",
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
+          "bottomEdgeAnchor": 0,
+          "leftEdgeAnchor": 0,
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 0,
+          "topEdgeAnchor": 0,
+          "useLegacyBottomAndRightAnchors": false
+        }
+      ],
+      "content": {},
+      "childrenContent": {
+        "Background": {
+          "bottomMargin": 30,
+          "height": 64,
+          "leftMargin": 30,
+          "rightMargin": 30,
+          "texture": "Group 12.png",
+          "tiled": true,
+          "topMargin": 30,
+          "width": 64
+        },
+        "Counter": {
+          "bold": true,
+          "italic": true,
+          "smoothed": true,
+          "underlined": false,
+          "string": "0",
+          "font": "JotiOne-Regular.ttf",
+          "textAlignment": "left",
+          "characterSize": 30,
+          "color": {
+            "b": 4,
+            "g": 0,
+            "r": 255
+          },
+          "content": {
+            "bold": true,
+            "isOutlineEnabled": true,
+            "isShadowEnabled": false,
+            "italic": true,
+            "outlineColor": "0;0;0",
+            "outlineThickness": 10,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "0",
+            "font": "JotiOne-Regular.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "center",
+            "characterSize": 30,
+            "color": "255;0;4"
+          }
+        },
+        "Icon": {
+          "adaptCollisionMaskAutomatically": false,
+          "updateIfNotVisible": false,
+          "animations": [
+            {
+              "name": "Star Gold",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Star Gold.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 23,
+                        "y": 23
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -4151,6 +4255,9 @@
           },
           {
             "objectName": "ScoreCounter"
+          },
+          {
+            "objectName": "levelCounter"
           }
         ]
       },
@@ -5845,6 +5952,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "levelCounter",
+          "persistentUuid": "959010e6-9dfd-4b1a-a749-0b37795d4648",
+          "width": 0,
+          "x": 120,
+          "y": 58,
+          "zOrder": 75,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -6318,7 +6441,19 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "ScoreCounter::ScoreCounter::SetScore"
+              },
+              "parameters": [
+                "levelCounter",
+                "=",
+                "difficultyMultiplier",
+                ""
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -10269,18 +10404,6 @@
             }
           ],
           "actions": [
-            {
-              "type": {
-                "value": "DebuggerTools::EnableDebugDraw"
-              },
-              "parameters": [
-                "",
-                "",
-                "",
-                "",
-                ""
-              ]
-            },
             {
               "type": {
                 "value": "PlatformBehavior::MaxSpeed"
