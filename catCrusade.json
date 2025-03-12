@@ -15,7 +15,7 @@
     "packageName": "com.example.gamename",
     "pixelsRounding": false,
     "projectUuid": "a7004e39-421d-4423-911c-f0fadfaa74a3",
-    "scaleMode": "linear",
+    "scaleMode": "nearest",
     "sizeOnStartupMode": "",
     "templateSlug": "starting-platformer",
     "version": "1.0.0",
@@ -1242,6 +1242,126 @@
         "name": "NewSprite6",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "file": "assets/EnemySprite/Right-01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\EnemySprite\\Right-01.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EnemySprite/Right-02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\EnemySprite\\Right-02.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EnemySprite/Left-01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\EnemySprite\\Left-01.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EnemySprite/Left-02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\EnemySprite\\Left-02.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/BarrelSprite/BarellSpinCW-01.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\BarrelSprite\\BarellSpinCW-01.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/BarrelSprite/BarellSpinCW-02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\BarrelSprite\\BarellSpinCW-02.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/BarrelSprite/BarellSpinCW-03.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\BarrelSprite\\BarellSpinCW-03.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/BarrelSprite/BarellSpinCW-04.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\BarrelSprite\\BarellSpinCW-04.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DragonSprite/dragon base-right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DragonSprite\\dragon base-right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DragonSprite/dragon walk-right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DragonSprite\\dragon walk-right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DragonSprite/dragon base.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DragonSprite\\dragon base.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DragonSprite/dragon walk.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DragonSprite\\dragon walk.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DragonSprite/dragon mouth.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DragonSprite\\dragon mouth.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/DragonSprite/dragon mouth-right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\DragonSprite\\dragon mouth-right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Ground-Sprite-New.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Ground-Sprite-New.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1433,18 +1553,12 @@
             {
               "looping": true,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.3333333333333333,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "right13",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon base-right.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1460,33 +1574,45 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
                       }
                     ]
                   ]
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "right14",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon walk-right.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1502,355 +1628,37 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
                       }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right15",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
+                    ],
                     [
                       {
                         "x": 0,
-                        "y": 2
+                        "y": 0
                       },
                       {
-                        "x": 64,
-                        "y": 2
+                        "x": 70,
+                        "y": 0
                       },
                       {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right16",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "x": 70,
+                        "y": 50
                       },
                       {
                         "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right17",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right18",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right19",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right20",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right21",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "right22",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": 94.5,
-                      "y": 34.5
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
+                        "y": 50
                       }
                     ]
                   ]
@@ -1870,14 +1678,8 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "left22",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon base.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1893,33 +1695,45 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
                       }
                     ]
                   ]
                 },
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "left23",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon walk.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1935,33 +1749,57 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
                       }
                     ]
                   ]
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "stop-right",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "left24",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon base-right.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -1977,33 +1815,57 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
                       }
                     ]
                   ]
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "stop-left",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "left25",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon base.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -2019,33 +1881,57 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
                       }
                     ]
                   ]
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fireball-left",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "left26",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon mouth.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -2061,33 +1947,57 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      }
+                    ],
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 0
+                      },
+                      {
+                        "x": 70,
+                        "y": 50
+                      },
+                      {
+                        "x": 0,
+                        "y": 50
                       }
                     ]
                   ]
-                },
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "fireball-right",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "left27",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
+                  "image": "assets\\DragonSprite\\dragon mouth-right.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -2103,187 +2013,37 @@
                     [
                       {
                         "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "y": 0
                       },
                       {
                         "x": 0,
-                        "y": 72
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 0,
+                        "y": 0
                       }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "left28",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
+                    ],
                     [
                       {
                         "x": 0,
-                        "y": 2
+                        "y": 0
                       },
                       {
-                        "x": 64,
-                        "y": 2
+                        "x": 70,
+                        "y": 0
                       },
                       {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "left29",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
+                        "x": 70,
+                        "y": 50
                       },
                       {
                         "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "left30",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "hasCustomCollisionMask": true,
-                  "image": "left31",
-                  "points": [
-                    {
-                      "name": "attack",
-                      "x": -25.5,
-                      "y": 32
-                    }
-                  ],
-                  "originPoint": {
-                    "name": "origine",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "centerPoint": {
-                    "automatic": true,
-                    "name": "centre",
-                    "x": 0,
-                    "y": 0
-                  },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 2
-                      },
-                      {
-                        "x": 64,
-                        "y": 2
-                      },
-                      {
-                        "x": 64.5,
-                        "y": 72
-                      },
-                      {
-                        "x": 0,
-                        "y": 72
+                        "y": 50
                       }
                     ]
                   ]
@@ -2296,11 +2056,11 @@
     },
     {
       "assetStoreId": "",
-      "height": 64,
+      "height": 18,
       "name": "Platform_Ground",
-      "texture": "assets\\StartingGround.png3",
+      "texture": "assets\\Ground-Sprite-New.png",
       "type": "TiledSpriteObject::TiledSprite",
-      "width": 64,
+      "width": 18,
       "variables": [],
       "effects": [],
       "behaviors": [
@@ -2443,13 +2203,61 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.165,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "right23",
+                  "image": "assets\\EnemySprite\\Right-01.png",
+                  "points": [
+                    {
+                      "name": "turnPoint",
+                      "x": 80.5,
+                      "y": 34.5
+                    },
+                    {
+                      "name": "cliffChecker",
+                      "x": 80,
+                      "y": 71
+                    },
+                    {
+                      "name": "frontDetect",
+                      "x": 79,
+                      "y": 0.5
+                    },
+                    {
+                      "name": "behindDetect",
+                      "x": -261.5,
+                      "y": -3
+                    },
+                    {
+                      "name": "jumpCollision",
+                      "x": 491.5,
+                      "y": -207
+                    },
+                    {
+                      "name": "topJump",
+                      "x": -29.5,
+                      "y": -120.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\EnemySprite\\Right-02.png",
                   "points": [
                     {
                       "name": "turnPoint",
@@ -2504,13 +2312,61 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
+              "looping": true,
               "metadata": "{\"pskl\":{}}",
-              "timeBetweenFrames": 0.08,
+              "timeBetweenFrames": 0.165,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "left",
+                  "image": "assets\\EnemySprite\\Left-01.png",
+                  "points": [
+                    {
+                      "name": "turnPoint",
+                      "x": 80.5,
+                      "y": 34.5
+                    },
+                    {
+                      "name": "cliffChecker",
+                      "x": 80,
+                      "y": 71
+                    },
+                    {
+                      "name": "frontDetect",
+                      "x": -261.5,
+                      "y": -3
+                    },
+                    {
+                      "name": "behindDetect",
+                      "x": 79,
+                      "y": 0.5
+                    },
+                    {
+                      "name": "jumpCollision",
+                      "x": -552,
+                      "y": -192
+                    },
+                    {
+                      "name": "topJump",
+                      "x": -20,
+                      "y": -120.5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\EnemySprite\\Left-02.png",
                   "points": [
                     {
                       "name": "turnPoint",
@@ -2719,9 +2575,9 @@
           "masks": 1
         },
         {
-          "canBeGrabbed": false,
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
           "platformType": "NormalPlatform",
           "yGrabOffset": 0
         }
@@ -2767,11 +2623,119 @@
           "directions": [
             {
               "looping": true,
-              "timeBetweenFrames": 0.025,
+              "timeBetweenFrames": 0.2,
               "sprites": [
                 {
                   "hasCustomCollisionMask": true,
-                  "image": "Bowling ball blue.png",
+                  "image": "assets\\BarrelSprite\\BarellSpinCW-01.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 0,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\BarrelSprite\\BarellSpinCW-02.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 0,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\BarrelSprite\\BarellSpinCW-03.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 0,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 0
+                      },
+                      {
+                        "x": 18,
+                        "y": 18
+                      },
+                      {
+                        "x": 0,
+                        "y": 18
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "assets\\BarrelSprite\\BarellSpinCW-04.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -5546,7 +5510,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6053426056308917,
+        "zoomFactor": 0.6053426056308918,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5589,15 +5553,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 47,
-          "keepRatio": true,
+          "depth": 3,
+          "height": 87,
           "layer": "",
           "name": "Platformer_Character",
           "persistentUuid": "de5c2631-ccee-47db-8dc8-d8d399168bfa",
-          "width": 47,
-          "x": 592,
-          "y": 69,
+          "width": 122,
+          "x": 563,
+          "y": 27,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -5640,15 +5603,15 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 30,
+          "depth": 1.6666666666666665,
+          "height": 50,
           "keepRatio": true,
           "layer": "",
           "name": "enemy1",
           "persistentUuid": "3cd9ec85-7554-4cc8-a36c-e925fb82a36c",
-          "width": 27,
-          "x": 288,
-          "y": 672,
+          "width": 45,
+          "x": 287,
+          "y": 648,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
