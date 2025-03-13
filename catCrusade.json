@@ -2626,7 +2626,7 @@
               "timeBetweenFrames": 0.2,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\BarrelSprite\\BarellSpinCW-01.png",
                   "points": [],
                   "originPoint": {
@@ -2640,29 +2640,10 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 18
-                      },
-                      {
-                        "x": 0,
-                        "y": 18
-                      }
-                    ]
-                  ]
+                  "customCollisionMask": []
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\BarrelSprite\\BarellSpinCW-02.png",
                   "points": [],
                   "originPoint": {
@@ -2676,29 +2657,10 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 18
-                      },
-                      {
-                        "x": 0,
-                        "y": 18
-                      }
-                    ]
-                  ]
+                  "customCollisionMask": []
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\BarrelSprite\\BarellSpinCW-03.png",
                   "points": [],
                   "originPoint": {
@@ -2712,29 +2674,10 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 18
-                      },
-                      {
-                        "x": 0,
-                        "y": 18
-                      }
-                    ]
-                  ]
+                  "customCollisionMask": []
                 },
                 {
-                  "hasCustomCollisionMask": true,
+                  "hasCustomCollisionMask": false,
                   "image": "assets\\BarrelSprite\\BarellSpinCW-04.png",
                   "points": [],
                   "originPoint": {
@@ -2748,26 +2691,7 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 0,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 0
-                      },
-                      {
-                        "x": 18,
-                        "y": 18
-                      },
-                      {
-                        "x": 0,
-                        "y": 18
-                      }
-                    ]
-                  ]
+                  "customCollisionMask": []
                 }
               ]
             }
