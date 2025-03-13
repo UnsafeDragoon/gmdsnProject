@@ -6375,13 +6375,25 @@
             },
             {
               "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "=",
+                "10",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "ScoreCounter::ScoreCounter::SetScore"
               },
               "parameters": [
                 "ScoreCounter",
                 "=",
                 "Platformer_Character.FireBullet::AmmoQuantity()",
-                ""
+                "10"
               ]
             }
           ]
@@ -6576,8 +6588,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "LevelTwo",
-      "name": "LevelTwo",
+      "mangledName": "mainLevel2",
+      "name": "mainLevel2",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -6593,7 +6605,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.2550455473354344,
+        "zoomFactor": 0.4491317150940597,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -6603,31 +6615,30 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 25,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
-          "persistentUuid": "e6a349b6-fc11-49e6-9d77-d1701c92a5a7",
-          "width": 334,
-          "x": 978,
-          "y": 579,
+          "persistentUuid": "0698072d-1350-416c-a594-d4119e52a144",
+          "width": 803,
+          "x": 245,
+          "y": 703,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
-          "angle": 90,
+          "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 44,
-          "keepRatio": true,
+          "depth": 3,
+          "height": 87,
           "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "1d43543a-85a9-478c-8bd0-d9a7e0392d51",
-          "width": 2252,
-          "x": 293,
-          "y": -428,
+          "name": "Platformer_Character",
+          "persistentUuid": "de5c2631-ccee-47db-8dc8-d8d399168bfa",
+          "width": 122,
+          "x": 563,
+          "y": 27,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -6637,15 +6648,71 @@
           "angle": 90,
           "customSize": true,
           "depth": 1,
-          "height": 44,
+          "height": 25,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
-          "persistentUuid": "de8656f0-6a0a-4587-ab1c-c2a4117d4b44",
-          "width": 2252,
-          "x": -1146,
-          "y": -430,
-          "zOrder": 2,
+          "persistentUuid": "033616f2-36cd-414e-962e-c55bf9403b05",
+          "width": 945,
+          "x": -235,
+          "y": 241,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 90,
+          "customSize": true,
+          "depth": 1,
+          "height": 25,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "a5ceb452-36c9-4d35-b520-d00e0691426d",
+          "width": 955,
+          "x": 571,
+          "y": 233,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1.6666666666666665,
+          "height": 50,
+          "keepRatio": true,
+          "layer": "",
+          "name": "enemy1",
+          "persistentUuid": "3cd9ec85-7554-4cc8-a36c-e925fb82a36c",
+          "width": 45,
+          "x": 287,
+          "y": 648,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "movementState",
+              "type": "number",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "ScoreCounter",
+          "persistentUuid": "85535505-c554-41b7-944f-ca407578fc49",
+          "width": 0,
+          "x": 1174,
+          "y": 37,
+          "zOrder": 67,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6654,15 +6721,38 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 44,
+          "height": 110,
           "keepRatio": true,
           "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "1e1747e0-c9ed-44d0-be04-11b05152643a",
-          "width": 1485,
-          "x": -38,
-          "y": 704,
-          "zOrder": 2,
+          "name": "EmoteCross",
+          "persistentUuid": "aeaeba3b-1263-4fe2-9edf-73da93bcc0c0",
+          "width": 110,
+          "x": 789,
+          "y": 105,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "value": true
+            }
+          ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 893,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "NewSprite",
+          "persistentUuid": "d64ecb58-30ad-4fa4-b367-3b62b6f2ca3f",
+          "width": 246,
+          "x": 1042,
+          "y": -35,
+          "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6671,14 +6761,133 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 893,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "NewSprite",
+          "persistentUuid": "59ab6988-f5ad-4db9-abaf-a72d0351625d",
+          "width": 246,
+          "x": -4,
+          "y": -42,
+          "zOrder": 11,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 360,
+          "customSize": true,
+          "depth": 1,
+          "height": 18,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
-          "persistentUuid": "71b166d9-5315-47e7-abc9-ce1024791324",
-          "width": 334,
-          "x": 514,
-          "y": 444,
+          "persistentUuid": "9ccd11bf-378c-4cfc-9ef1-eea30ddcf84b",
+          "width": 638,
+          "x": 244,
+          "y": 610,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 2,
+          "height": 36,
+          "keepRatio": true,
+          "layer": "",
+          "name": "detectionFront",
+          "persistentUuid": "9539fc28-9f17-4488-8f7c-3fb286cc4d54",
+          "width": 107,
+          "x": 295,
+          "y": -124,
+          "zOrder": 69,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 39,
+          "keepRatio": true,
+          "layer": "",
+          "name": "detectionBack",
+          "persistentUuid": "ad6e3c7f-ccb9-4269-9913-189f85b8202e",
+          "width": 125,
+          "x": 448,
+          "y": -144,
+          "zOrder": 70,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 108,
+          "keepRatio": true,
+          "layer": "",
+          "name": "detectionJumpPath",
+          "persistentUuid": "d598e935-d080-48d3-8106-f7fe941be66d",
+          "width": 83,
+          "x": 602,
+          "y": -191,
+          "zOrder": 71,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "deleteBarrel",
+          "persistentUuid": "889f3d06-25da-488c-b383-dbb4c21cbc3f",
+          "width": 793,
+          "x": 243,
+          "y": 693,
+          "zOrder": 72,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 42,
+          "keepRatio": true,
+          "layer": "",
+          "name": "detectionJumpTop",
+          "persistentUuid": "63a8e114-37b1-4154-b4c0-468e1b5162af",
+          "width": 46,
+          "x": 720,
+          "y": -127,
+          "zOrder": 73,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 180,
+          "customSize": true,
+          "depth": 1,
+          "height": 25,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Platform_Ground",
+          "persistentUuid": "48d7e0af-3920-4dfd-84dd-2426062c0907",
+          "width": 945,
+          "x": 170,
+          "y": -227,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -6688,15 +6897,15 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 195,
           "keepRatio": true,
           "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "bcdb8cef-1523-4f0b-bf88-1d75e774b528",
-          "width": 334,
-          "x": 166,
-          "y": 294,
-          "zOrder": 1,
+          "name": "invisibleWall",
+          "persistentUuid": "82618f0e-2a8a-4a37-a62c-96576f5ef4a4",
+          "width": 64,
+          "x": 446,
+          "y": -67,
+          "zOrder": 74,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6705,15 +6914,15 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 195,
           "keepRatio": true,
           "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "0969170a-abc7-4cf9-8696-96e4f2cacef5",
-          "width": 223,
-          "x": 21,
-          "y": 136,
-          "zOrder": 1,
+          "name": "invisibleWall",
+          "persistentUuid": "2e26a790-fca2-45d5-b6dd-65f596f4491f",
+          "width": 64,
+          "x": 744,
+          "y": -62,
+          "zOrder": 74,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6722,15 +6931,31 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 53,
           "keepRatio": true,
           "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "f1331d3b-e7b8-422d-94ba-38f59f8f9c19",
-          "width": 223,
-          "x": 519,
-          "y": 133,
-          "zOrder": 1,
+          "name": "invisibleWall",
+          "persistentUuid": "42ccbebd-1edc-47e2-b2c3-d757e305d6dd",
+          "width": 287,
+          "x": 467,
+          "y": -35,
+          "zOrder": 74,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "levelCounter",
+          "persistentUuid": "959010e6-9dfd-4b1a-a749-0b37795d4648",
+          "width": 0,
+          "x": 120,
+          "y": 58,
+          "zOrder": 75,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6738,315 +6963,657 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "50b27114-fe9a-4ad1-b2b7-6a6eefb4f0e8",
-          "width": 223,
-          "x": 259,
-          "y": -34,
-          "zOrder": 1,
+          "depth": 0,
+          "height": 16,
+          "layer": "UI",
+          "name": "Platform_Ground2",
+          "persistentUuid": "8d237372-087e-454c-aef8-6e44b181b602",
+          "width": 349,
+          "x": 448,
+          "y": 120,
+          "zOrder": 76,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
           "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI",
+          "name": "tutorial",
+          "persistentUuid": "89a8c776-f6f5-42e2-a1e7-80191412d09c",
+          "width": 0,
+          "x": 50,
+          "y": 307,
+          "zOrder": 77,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 360,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 18,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
-          "persistentUuid": "e34eb5db-3764-4b79-bd8e-bca4998a9527",
-          "width": 223,
-          "x": 800,
-          "y": -8,
+          "persistentUuid": "947107fe-5216-429c-b77d-049bf0b28d77",
+          "width": 638,
+          "x": 400,
+          "y": 514,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": 360,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 18,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
-          "persistentUuid": "ba09429f-2111-40a4-a470-75a6141cb582",
-          "width": 223,
-          "x": 1111,
-          "y": -168,
+          "persistentUuid": "7e2b42bf-0720-4c0b-bb20-501c386c68ab",
+          "width": 638,
+          "x": 248,
+          "y": 416,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": 360,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 18,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
-          "persistentUuid": "54ffc589-1114-431b-9de9-eb9ac93da912",
-          "width": 223,
-          "x": -2,
-          "y": -179,
+          "persistentUuid": "e69d8a72-5a04-4c25-a830-cf861e521eb1",
+          "width": 638,
+          "x": 398,
+          "y": 320,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         },
         {
-          "angle": 0,
+          "angle": 360,
           "customSize": true,
           "depth": 1,
-          "height": 45,
+          "height": 18,
           "keepRatio": true,
           "layer": "",
           "name": "Platform_Ground",
-          "persistentUuid": "1bd822d1-058c-4ba0-a4e2-1936d5b99aaa",
-          "width": 223,
-          "x": 810,
-          "y": -325,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "080c3f54-3058-4d86-932c-4c343b0d9f20",
-          "width": 223,
-          "x": 222,
-          "y": -335,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "abbd31e2-b80e-42e2-b452-d45170e0f763",
-          "width": 223,
-          "x": 538,
-          "y": -453,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "03092e45-d4fb-43e8-83b3-d12b5403299e",
-          "width": 223,
-          "x": 826,
-          "y": -577,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "4591df55-9932-4191-a5c0-67319e9d0a46",
-          "width": 223,
-          "x": 241,
-          "y": -610,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "ce19a337-66b5-4acd-8545-5d6eb7d7a68d",
-          "width": 223,
-          "x": 586,
-          "y": -770,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "5348724f-ccdf-427b-a10e-d026bc8e2006",
-          "width": 223,
-          "x": 1131,
-          "y": -748,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "6c254f96-f542-4864-b91d-b98df5cc547c",
-          "width": 223,
-          "x": 591,
-          "y": -1029,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "3c3b248d-1b95-4f9c-928f-74fd586c3a41",
-          "width": 223,
-          "x": 927,
-          "y": -929,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "305a7e4c-3cca-47e6-9f22-980d2e384cf5",
-          "width": 223,
-          "x": 319,
-          "y": -1163,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "d34ef9f5-b79a-4e21-a19e-281114c7ffa2",
-          "width": 223,
-          "x": 850,
-          "y": -1204,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "cbfc0923-68f7-4773-b34a-01e824bcc582",
-          "width": 223,
-          "x": 111,
-          "y": -859,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "5c1ef0be-8a4d-4e6b-b172-9d43496c1410",
-          "width": 223,
-          "x": 1111,
-          "y": -1351,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 45,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Platform_Ground",
-          "persistentUuid": "2096e57a-33d2-43c1-87ad-24bdf685f4ed",
-          "width": 646,
-          "x": 378,
-          "y": -1549,
+          "persistentUuid": "ce88d3c2-13be-47e2-af7c-23e7af218b09",
+          "width": 638,
+          "x": 245,
+          "y": 220,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
         }
       ],
-      "objects": [],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "59c054d9eb500c8b6ce84b14e13b4e3618d7a5b227af7cf86e7b46a84e7aefb7",
+          "name": "IndustrialNarrowLadder",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Industrial narrow ladder.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 20,
+                            "y": 0
+                          },
+                          {
+                            "x": 120,
+                            "y": 0
+                          },
+                          {
+                            "x": 120,
+                            "y": 140
+                          },
+                          {
+                            "x": 20,
+                            "y": 140
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Platform",
+              "type": "PlatformBehavior::PlatformBehavior",
+              "canBeGrabbed": false,
+              "platformType": "NormalPlatform",
+              "yGrabOffset": 0
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "detectionFront",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite5",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "detectionBack",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite4",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "detectionJumpPath",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite4",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "deleteBarrel",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "deleteBarrel",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "deleteBarrel",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "detectionJumpTop",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite4",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "invisibleWall",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "NewSprite6",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "tutorial",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "WASD- Move\nSpace- Jump\nK- fire fireball\nU- Aim fire breath",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 20,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "WASD- Move\nSpace- Jump\nK- fire fireball\nU- Aim fire breath",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "255;255;255"
+          }
+        }
+      ],
       "objectsFolderStructure": {
-        "folderName": "__ROOT"
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "IndustrialNarrowLadder"
+          },
+          {
+            "objectName": "NewSprite"
+          },
+          {
+            "objectName": "detectionFront"
+          },
+          {
+            "objectName": "detectionBack"
+          },
+          {
+            "objectName": "detectionJumpPath"
+          },
+          {
+            "objectName": "detectionJumpTop"
+          },
+          {
+            "objectName": "deleteBarrel"
+          },
+          {
+            "objectName": "invisibleWall"
+          },
+          {
+            "objectName": "tutorial"
+          }
+        ]
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "playerMovementMechanics"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "crossHairMovement"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "npcPlayer"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                ".1"
+              ]
+            },
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "=",
+                "7",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ScoreCounter::ScoreCounter::SetScore"
+              },
+              "parameters": [
+                "ScoreCounter",
+                "=",
+                "Platformer_Character.FireBullet::AmmoQuantity()",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ScoreCounter::ScoreCounter::SetScore"
+              },
+              "parameters": [
+                "levelCounter",
+                "=",
+                "difficultyMultiplier",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
@@ -7074,6 +7641,39 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
@@ -7123,16 +7723,8 @@
           "type": "Health::Health"
         },
         {
-          "name": "LinkPathFinding",
-          "type": "LinkTools::LinkPathFinding"
-        },
-        {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
-        },
-        {
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior"
         },
         {
           "name": "Physics2",
@@ -7170,6 +7762,10 @@
         {
           "name": "SmoothCamera",
           "type": "SmoothCamera::SmoothCamera"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         },
         {
           "name": "TopDownMovement",
@@ -7371,14 +7967,13 @@
           "actions": [
             {
               "type": {
-                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+                "value": "ScoreCounter::ScoreCounter::SetScore"
               },
               "parameters": [
-                "Platformer_Character",
-                "FireBullet",
+                "ScoreCounter",
                 "=",
-                "10",
-                ""
+                "Platformer_Character.FireBullet::AmmoQuantity()",
+                "10"
               ]
             }
           ]
