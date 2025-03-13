@@ -7361,6 +7361,33 @@
           "conditions": [
             {
               "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "=",
+                "10",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "KeyFromTextPressed"
               },
               "parameters": [
@@ -7720,12 +7747,24 @@
                 },
                 {
                   "type": {
+                    "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "FireBullet",
+                    "-",
+                    "7",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "ScoreCounter::ScoreCounter::SetScore"
                   },
                   "parameters": [
                     "ScoreCounter",
-                    "-",
-                    "7",
+                    "=",
+                    "Platformer_Character.FireBullet::AmmoQuantity()",
                     ""
                   ]
                 },
@@ -8570,45 +8609,53 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "",
-                "\"k\""
-              ]
-            },
-            {
-              "type": {
-                "value": "FireBullet::FireBullet::AmmoQuantity"
-              },
-              "parameters": [
-                "Platformer_Character",
-                "FireBullet",
-                ">",
-                "0",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "inverted": true,
-                "value": "FireBullet::FireBullet::IsFiringCooldownActive"
-              },
-              "parameters": [
-                "Platformer_Character",
-                "FireBullet",
-                "="
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "Platformer_Character",
-                "killedNpc",
-                "False",
-                ""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "killedNpc",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "FireBullet::FireBullet::IsFiringCooldownActive"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "FireBullet",
+                    "="
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::AmmoQuantity"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "FireBullet",
+                    "!=",
+                    "0",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"k\""
+                  ]
+                }
               ]
             },
             {
@@ -8663,8 +8710,8 @@
               },
               "parameters": [
                 "ScoreCounter",
-                "-",
-                "1",
+                "=",
+                "Platformer_Character.FireBullet::AmmoQuantity()",
                 ""
               ]
             },
@@ -8731,33 +8778,6 @@
           "conditions": [
             {
               "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
-              },
-              "parameters": [
-                "Platformer_Character",
-                "FireBullet",
-                "=",
-                "15",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
                 "value": "CollisionNP"
               },
               "parameters": [
@@ -8809,6 +8829,33 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"k\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::AmmoQuantity"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "=",
+                "1",
+                ""
+              ]
+            }
+          ],
+          "actions": []
         }
       ]
     },
