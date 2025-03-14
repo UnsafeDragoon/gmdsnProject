@@ -1278,7 +1278,7 @@
       {
         "file": "assets/BarrelSprite/BarellSpinCW-01.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/BarrelSprite/BarellSpinCW-01.png\",\"extension\":\".png\"}",
         "name": "assets\\BarrelSprite\\BarellSpinCW-01.png",
         "smoothed": false,
         "userAdded": false
@@ -1286,7 +1286,7 @@
       {
         "file": "assets/BarrelSprite/BarellSpinCW-02.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/BarrelSprite/BarellSpinCW-02.png\",\"extension\":\".png\"}",
         "name": "assets\\BarrelSprite\\BarellSpinCW-02.png",
         "smoothed": false,
         "userAdded": false
@@ -1294,7 +1294,7 @@
       {
         "file": "assets/BarrelSprite/BarellSpinCW-03.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/BarrelSprite/BarellSpinCW-03.png\",\"extension\":\".png\"}",
         "name": "assets\\BarrelSprite\\BarellSpinCW-03.png",
         "smoothed": false,
         "userAdded": false
@@ -1302,7 +1302,7 @@
       {
         "file": "assets/BarrelSprite/BarellSpinCW-04.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"assets/BarrelSprite/BarellSpinCW-04.png\",\"extension\":\".png\"}",
         "name": "assets\\BarrelSprite\\BarellSpinCW-04.png",
         "smoothed": false,
         "userAdded": false
@@ -2618,11 +2618,12 @@
       ],
       "animations": [
         {
-          "name": "",
+          "name": "assets\\BarrelSprite\\BarellSpinCW-01",
           "useMultipleDirections": false,
           "directions": [
             {
               "looping": true,
+              "metadata": "{\"pskl\":{}}",
               "timeBetweenFrames": 0.2,
               "sprites": [
                 {
@@ -5434,7 +5435,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6053426056308918,
+        "zoomFactor": 0.7145235211091033,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5871,6 +5872,29 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1.6666666666666665,
+          "height": 50,
+          "keepRatio": true,
+          "layer": "",
+          "name": "enemy1",
+          "persistentUuid": "75bcd886-3d04-4f15-a803-428f66c37a8c",
+          "width": 45,
+          "x": 289,
+          "y": 653,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": [
+            {
+              "name": "movementState",
+              "type": "number",
+              "value": 1
+            }
+          ]
         }
       ],
       "objects": [
@@ -6605,7 +6629,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.4491317150940597,
+        "zoomFactor": 0.7635239156599015,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -6688,8 +6712,8 @@
           "name": "enemy1",
           "persistentUuid": "3cd9ec85-7554-4cc8-a36c-e925fb82a36c",
           "width": 45,
-          "x": 287,
-          "y": 648,
+          "x": 312,
+          "y": 644,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -7582,6 +7606,16 @@
                 "=",
                 "Platformer_Character.FireBullet::AmmoQuantity()",
                 "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "ActivateBehavior"
+              },
+              "parameters": [
+                "Platform_Ground",
+                "Physics2",
+                ""
               ]
             }
           ]
