@@ -9549,7 +9549,7 @@
           "isLocked": false,
           "name": "UI",
           "renderingType": "",
-          "visibility": false,
+          "visibility": true,
           "cameras": [],
           "effects": [
             {
@@ -9951,6 +9951,18 @@
                     "FireBurst",
                     "=",
                     "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::AmmoQuantity"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "FireBullet",
+                    ">=",
+                    "7",
+                    ""
                   ]
                 }
               ],
