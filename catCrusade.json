@@ -1386,6 +1386,14 @@
         "name": "assets\\EnemySprite\\Block-Leftt.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Cave-Background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Cave-Background.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -5517,7 +5525,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6686678069237633,
+        "zoomFactor": 0.49611561479116145,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -5977,6 +5985,23 @@
               "value": 1
             }
           ]
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 8,
+          "height": 1357,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite2",
+          "persistentUuid": "21eedece-552c-4844-a8d7-2c1a8f3e1a69",
+          "width": 798,
+          "x": 247,
+          "y": -45,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -6402,6 +6427,66 @@
             "characterSize": 20,
             "color": "255;255;255"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\Cave-Background.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 100,
+                            "y": 0
+                          },
+                          {
+                            "x": 100,
+                            "y": 170
+                          },
+                          {
+                            "x": 0,
+                            "y": 170
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -6433,6 +6518,9 @@
           },
           {
             "objectName": "tutorial"
+          },
+          {
+            "objectName": "NewSprite2"
           }
         ]
       },
