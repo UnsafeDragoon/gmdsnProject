@@ -1362,6 +1362,30 @@
         "name": "assets\\Ground-Sprite-New.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/CastleBackground.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\CastleBackground.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EnemySprite/Block-Right.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\EnemySprite\\Block-Right.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/EnemySprite/Block-Leftt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\EnemySprite\\Block-Leftt.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2056,11 +2080,11 @@
     },
     {
       "assetStoreId": "",
-      "height": 18,
+      "height": 100,
       "name": "Platform_Ground",
       "texture": "assets\\Ground-Sprite-New.png",
       "type": "TiledSpriteObject::TiledSprite",
-      "width": 18,
+      "width": 100,
       "variables": [],
       "effects": [],
       "behaviors": [
@@ -2399,6 +2423,64 @@
                       "y": -120.5
                     }
                   ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "block-right",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\EnemySprite\\Block-Right.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "block-left",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "assets\\EnemySprite\\Block-Leftt.png",
+                  "points": [],
                   "originPoint": {
                     "name": "origine",
                     "x": 0,
@@ -5435,7 +5517,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7145235211091033,
+        "zoomFactor": 0.6686678069237633,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -6629,7 +6711,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.7635239156599015,
+        "zoomFactor": 0.5128447970798787,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -7083,6 +7165,23 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 8,
+          "height": 1389,
+          "keepRatio": true,
+          "layer": "",
+          "name": "CastleBackground",
+          "persistentUuid": "0d4f3da6-51e2-48e2-b310-adfaf6b3ea80",
+          "width": 817,
+          "x": 228,
+          "y": -208,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -7508,6 +7607,66 @@
             "characterSize": 20,
             "color": "255;255;255"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "CastleBackground",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "assets\\CastleBackground.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 100,
+                            "y": 0
+                          },
+                          {
+                            "x": 100,
+                            "y": 170
+                          },
+                          {
+                            "x": 0,
+                            "y": 170
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -7539,6 +7698,9 @@
           },
           {
             "objectName": "tutorial"
+          },
+          {
+            "objectName": "CastleBackground"
           }
         ]
       },
