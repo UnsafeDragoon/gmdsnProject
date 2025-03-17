@@ -6823,7 +6823,7 @@
     {
       "name": "difficultyMultiplier",
       "type": "number",
-      "value": 30
+      "value": 0
     },
     {
       "name": "carryOverAmmo",
