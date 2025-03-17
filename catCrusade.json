@@ -2038,6 +2038,20 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "GothicPixels.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "GothicPixels.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "Alkhemikal.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "Alkhemikal.ttf",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -6857,7 +6871,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.516687749695098,
+        "zoomFactor": 0.7198777336305464,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -13885,15 +13899,15 @@
       ]
     },
     {
-      "b": 209,
+      "b": 48,
       "disableInputWhenNotFocused": true,
       "mangledName": "credits",
       "name": "credits",
-      "r": 209,
+      "r": 48,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
       "title": "",
-      "v": 209,
+      "v": 48,
       "uiSettings": {
         "grid": false,
         "gridType": "rectangular",
@@ -13904,15 +13918,144 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.546875,
+        "zoomFactor": 0.5653158055126313,
         "windowMask": false
       },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
-      "objects": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "CreditsTitle",
+          "persistentUuid": "47e41e14-2a2a-4347-b4f9-bc6702520381",
+          "width": 0,
+          "x": 498,
+          "y": 31,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "CreditsTitle",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Glow",
+              "name": "Effect",
+              "doubleParameters": {
+                "distance": 5,
+                "innerStrength": 0,
+                "outerStrength": 1
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "string": "CREDITS",
+          "font": "GothicPixels.ttf",
+          "textAlignment": "left",
+          "characterSize": 60,
+          "color": {
+            "b": 18,
+            "g": 0,
+            "r": 146
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "CREDITS",
+            "font": "GothicPixels.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "color": "146;0;18"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Names_Jobs",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Donovan Burrola - Programming & Level Design\nElijah Martiniano - Programming & Level Design\nQuincy Paulos - Art lead\n\nAssociates:\nCharlie Bunch - Assistant Art Lead",
+          "font": "Alkhemikal.ttf",
+          "textAlignment": "center",
+          "characterSize": 20,
+          "color": {
+            "b": 24,
+            "g": 168,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Donovan Burrola - Programming & Level Design\nElijah Martiniano - Programming & Level Design\nQuincy Paulos - Art lead\n\nAssociates:\nCharlie Bunch - Assistant Art Lead",
+            "font": "Alkhemikal.ttf",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 20,
+            "color": "255;168;24"
+          }
+        }
+      ],
       "objectsFolderStructure": {
-        "folderName": "__ROOT"
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "CreditsTitle"
+          },
+          {
+            "objectName": "Names_Jobs"
+          }
+        ]
       },
       "events": [],
       "layers": [
@@ -14038,6 +14181,10 @@
         {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     }
