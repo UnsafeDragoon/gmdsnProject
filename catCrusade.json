@@ -7968,12 +7968,30 @@
           "conditions": [
             {
               "type": {
-                "value": "NumberVariable"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "difficultyMultiplier",
-                ">",
-                "0"
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "difficultyMultiplier",
+                    ">",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "difficultyMultiplier",
+                    "<=",
+                    "2"
+                  ]
+                }
               ]
             },
             {
@@ -8005,6 +8023,126 @@
                 "FireBullet",
                 "+",
                 "4",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "difficultyMultiplier",
+                    "<=",
+                    "5"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "difficultyMultiplier",
+                    ">",
+                    "2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "=",
+                "carryOverAmmo",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "+",
+                "2",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "difficultyMultiplier",
+                    ">",
+                    "5"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "=",
+                "carryOverAmmo",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::SetAmmoQuantityOp"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                "+",
+                "1",
                 ""
               ]
             }
@@ -13756,7 +13894,19 @@
       "stopSoundsOnStartup": true,
       "title": "",
       "v": 209,
-      "uiSettings": {},
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
       "objectsGroups": [],
       "variables": [],
       "instances": [],
@@ -15317,7 +15467,7 @@
                 "value": "Wait"
               },
               "parameters": [
-                "1"
+                "1.17"
               ]
             },
             {
