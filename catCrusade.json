@@ -6584,10 +6584,10 @@
           "masks": 1
         },
         {
-          "canBeGrabbed": false,
           "name": "Platform",
-          "platformType": "Jumpthru",
           "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "Jumpthru",
           "yGrabOffset": 0
         }
       ]
@@ -13872,6 +13872,10 @@
           "type": "SmoothCamera::SmoothCamera"
         },
         {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
           "name": "TopDownMovement",
           "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         }
@@ -13926,45 +13930,53 @@
           "conditions": [
             {
               "type": {
-                "value": "KeyFromTextPressed"
+                "value": "BuiltinCommonInstructions::And"
               },
-              "parameters": [
-                "",
-                "\"u\""
-              ]
-            },
-            {
-              "type": {
-                "value": "FireBullet::FireBullet::AmmoQuantity"
-              },
-              "parameters": [
-                "Platformer_Character",
-                "FireBullet",
-                ">=",
-                "4",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "Platformer_Character",
-                "killedNpc",
-                "False",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "Platformer_Character",
-                "lostLevel",
-                "False",
-                ""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"u\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::AmmoQuantity"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "FireBullet",
+                    ">=",
+                    "4",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "killedNpc",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "lostLevel",
+                    "False",
+                    ""
+                  ]
+                }
               ]
             },
             {
@@ -14091,16 +14103,6 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
-                    "Platformer_Character",
-                    "SmoothCamera",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
                     "crossHair",
                     "PlatformerObject",
                     "yes"
@@ -14122,28 +14124,8 @@
                   },
                   "parameters": [
                     "crossHair",
-                    "SmoothCamera",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "crossHair",
                     "PlatformerConfigurationStack",
                     "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "SmoothCamera",
-                    "no"
                   ]
                 },
                 {
@@ -14232,16 +14214,6 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
-                    "Platformer_Character",
-                    "SmoothCamera",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
                     "crossHair",
                     "PlatformerObject",
                     "no"
@@ -14263,28 +14235,8 @@
                   },
                   "parameters": [
                     "crossHair",
-                    "SmoothCamera",
-                    "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "crossHair",
                     "PlatformerConfigurationStack",
                     "no"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "SmoothCamera",
-                    "yes"
                   ]
                 },
                 {
@@ -15765,8 +15717,48 @@
                     "=",
                     "0"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "FireBullet::FireBullet::AmmoQuantity"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "FireBullet",
+                    ">=",
+                    "4",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "killedNpc",
+                    "False",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "lostLevel",
+                    "False",
+                    ""
+                  ]
                 }
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -15870,18 +15862,6 @@
                 "crossHair",
                 "PlatformerConfigurationStack",
                 "no"
-              ]
-            },
-            {
-              "type": {
-                "value": "CentreCamera"
-              },
-              "parameters": [
-                "",
-                "Platformer_Character",
-                "",
-                "",
-                ""
               ]
             },
             {
