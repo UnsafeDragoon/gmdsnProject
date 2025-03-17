@@ -2028,6 +2028,16 @@
         "name": "assets\\EnemySprite\\Right-02",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Screams Male 03.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Screams Male 03.ogg",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -6813,7 +6823,7 @@
     {
       "name": "difficultyMultiplier",
       "type": "number",
-      "value": 0
+      "value": 30
     },
     {
       "name": "carryOverAmmo",
@@ -7233,12 +7243,12 @@
         {
           "angle": 0,
           "customSize": true,
-          "depth": 0,
+          "depth": 1,
           "height": 16,
           "layer": "UI",
           "name": "Platform_Ground2",
           "persistentUuid": "8d237372-087e-454c-aef8-6e44b181b602",
-          "width": 349,
+          "width": 432,
           "x": 448,
           "y": 120,
           "zOrder": 76,
@@ -13930,53 +13940,45 @@
           "conditions": [
             {
               "type": {
-                "value": "BuiltinCommonInstructions::And"
+                "value": "KeyFromTextPressed"
               },
-              "parameters": [],
-              "subInstructions": [
-                {
-                  "type": {
-                    "value": "KeyFromTextPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"u\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "FireBullet::FireBullet::AmmoQuantity"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "FireBullet",
-                    ">=",
-                    "4",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "killedNpc",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "lostLevel",
-                    "False",
-                    ""
-                  ]
-                }
+              "parameters": [
+                "",
+                "\"u\""
+              ]
+            },
+            {
+              "type": {
+                "value": "FireBullet::FireBullet::AmmoQuantity"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "FireBullet",
+                ">=",
+                "4",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "killedNpc",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "lostLevel",
+                "False",
+                ""
               ]
             },
             {
@@ -14103,6 +14105,16 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "Platformer_Character",
+                    "SmoothCamera",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "crossHair",
                     "PlatformerObject",
                     "yes"
@@ -14124,8 +14136,28 @@
                   },
                   "parameters": [
                     "crossHair",
+                    "SmoothCamera",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "crossHair",
                     "PlatformerConfigurationStack",
                     "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "SmoothCamera",
+                    "no"
                   ]
                 },
                 {
@@ -14214,6 +14246,16 @@
                     "value": "ActivateBehavior"
                   },
                   "parameters": [
+                    "Platformer_Character",
+                    "SmoothCamera",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
                     "crossHair",
                     "PlatformerObject",
                     "no"
@@ -14235,8 +14277,28 @@
                   },
                   "parameters": [
                     "crossHair",
+                    "SmoothCamera",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "crossHair",
                     "PlatformerConfigurationStack",
                     "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ActivateBehavior"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "SmoothCamera",
+                    "yes"
                   ]
                 },
                 {
@@ -15717,48 +15779,8 @@
                     "=",
                     "0"
                   ]
-                },
-                {
-                  "type": {
-                    "value": "FireBullet::FireBullet::AmmoQuantity"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "FireBullet",
-                    ">=",
-                    "4",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "killedNpc",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "lostLevel",
-                    "False",
-                    ""
-                  ]
                 }
               ]
-            },
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
             }
           ],
           "actions": [
@@ -15862,6 +15884,18 @@
                 "crossHair",
                 "PlatformerConfigurationStack",
                 "no"
+              ]
+            },
+            {
+              "type": {
+                "value": "CentreCamera"
+              },
+              "parameters": [
+                "",
+                "Platformer_Character",
+                "",
+                "",
+                ""
               ]
             },
             {
@@ -18214,7 +18248,7 @@
               },
               "parameters": [
                 "",
-                "dafb79fda1449ac80c3d42b10691c1d256b37728cb0a7f2b86fb1597632f3ce2_Scream 2.aac",
+                "Screams Male 03.ogg",
                 "",
                 "100",
                 "1"
