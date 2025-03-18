@@ -2052,6 +2052,46 @@
         "metadata": "",
         "name": "Alkhemikal.ttf",
         "userAdded": false
+      },
+      {
+        "file": "../../../../Downloads/Epic-Chase(chosic.com).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "..\\..\\..\\..\\Downloads\\Epic-Chase(chosic.com).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Epic-Chase(chosic.com).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Epic-Chase(chosic.com).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "../../../../Downloads/Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "..\\..\\..\\..\\Downloads\\Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -7906,6 +7946,18 @@
           "actions": [
             {
               "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "..\\..\\..\\..\\Downloads\\Epic-Chase(chosic.com).mp3",
+                "",
+                "50",
+                "1"
+              ]
+            },
+            {
+              "type": {
                 "value": "Wait"
               },
               "parameters": [
@@ -10898,6 +10950,18 @@
                 "Physics2",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "..\\..\\..\\..\\Downloads\\Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3",
+                "",
+                "87",
+                "1"
+              ]
             }
           ]
         },
@@ -13563,6 +13627,18 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlayMusic"
+              },
+              "parameters": [
+                "",
+                "..\\..\\..\\..\\Downloads\\Epic-Chase(chosic.com).mp3",
+                "",
+                "50",
+                "1"
+              ]
+            },
             {
               "type": {
                 "value": "Wait"
