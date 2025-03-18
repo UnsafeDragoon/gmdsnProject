@@ -1,5 +1,5 @@
 {
-  "firstLayout": "mainLevel",
+  "firstLayout": "mainMenu",
   "gdVersion": {
     "build": 226,
     "major": 5,
@@ -2092,6 +2092,48 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Run_03.wav",
+        "kind": "audio",
+        "metadata": "",
+        "name": "f24eba85cff51d9f9cd6f7d8c808ca1d71372e9064af83e4235502ce8eaf3be5_Run_03.wav",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/SoundEffects/Nox Footsteps/Tile/Run/f24eba85cff51d9f9cd6f7d8c808ca1d71372e9064af83e4235502ce8eaf3be5_Run_03.wav",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Hit 10.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "47145ef21ad7fe6be02a0ba478b5df0761869213c56c4bcf2835f84c6c8c76af_Hit 10.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Hit/47145ef21ad7fe6be02a0ba478b5df0761869213c56c4bcf2835f84c6c8c76af_Hit 10.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Jump 10.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "a1617bd8c1c5df8e001af5b3256272bbe23bd95bd790a6be6bb2cacc5f7ac15d_Jump 10.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Jump/a1617bd8c1c5df8e001af5b3256272bbe23bd95bd790a6be6bb2cacc5f7ac15d_Jump 10.aac",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -2226,58 +2268,6 @@
           "useLegacyTrajectory": false,
           "xGrabTolerance": 10,
           "yGrabOffset": 0
-        },
-        {
-          "name": "SmoothCamera",
-          "type": "SmoothCamera::SmoothCamera",
-          "LeftwardSpeed": 0.9,
-          "RightwardSpeed": 0.9,
-          "UpwardSpeed": 0.95,
-          "DownwardSpeed": 0.95,
-          "FollowOnX": false,
-          "FollowOnY": false,
-          "FollowFreeAreaLeft": 0,
-          "FollowFreeAreaRight": 0,
-          "FollowFreeAreaTop": 0,
-          "FollowFreeAreaBottom": 0,
-          "CameraOffsetX": 0,
-          "CameraOffsetY": 0,
-          "CameraDelay": 0,
-          "ForecastTime": 0,
-          "ForecastHistoryDuration": 0,
-          "LogLeftwardSpeed": 2.0247e-320,
-          "LogRightwardSpeed": 2.0247e-320,
-          "LogDownwardSpeed": 2.0247e-320,
-          "LogUpwardSpeed": 2.0247e-320,
-          "DelayedCenterX": 2.0247e-320,
-          "DelayedCenterY": 2.0247e-320,
-          "ForecastHistoryMeanX": 2.0247e-320,
-          "ForecastHistoryMeanY": 2.0247e-320,
-          "ForecastHistoryVarianceX": 2.0247e-320,
-          "ForecastHistoryCovariance": 2.0247e-320,
-          "ForecastHistoryLinearA": 2.0247e-320,
-          "ForecastHistoryLinearB": 2.0247e-320,
-          "ForecastedX": 2.0247e-320,
-          "ForecastedY": 2.0247e-320,
-          "ProjectedNewestX": 2.0247e-320,
-          "ProjectedNewestY": 2.0247e-320,
-          "ProjectedOldestX": 2.0247e-320,
-          "ProjectedOldestY": 2.0247e-320,
-          "ForecastHistoryVarianceY": 2.0247e-320,
-          "Index": 2.0247e-320,
-          "CameraDelayCatchUpSpeed": 0,
-          "CameraExtraDelay": 2.0247e-320,
-          "WaitingSpeedXMax": 2.0247e-320,
-          "WaitingSpeedYMax": 2.0247e-320,
-          "WaitingEnd": 2.0247e-320,
-          "CameraDelayCatchUpDuration": 2.0247e-320,
-          "LeftwardSpeedMax": 9000,
-          "RightwardSpeedMax": 9000,
-          "UpwardSpeedMax": 9000,
-          "DownwardSpeedMax": 9000,
-          "OldX": 9000.000000007454,
-          "OldY": 9000.000000007454,
-          "IsCalledManually": false
         }
       ],
       "animations": [
@@ -8366,10 +8356,6 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
-          "name": "SmoothCamera",
-          "type": "SmoothCamera::SmoothCamera"
-        },
-        {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
         },
@@ -13765,7 +13751,7 @@
                 "Platformer_Character",
                 "FireBullet",
                 "+",
-                "10-difficultyMultiplier",
+                "round(10/difficultyMultiplier)",
                 ""
               ]
             }
@@ -13961,10 +13947,6 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
-          "name": "SmoothCamera",
-          "type": "SmoothCamera::SmoothCamera"
-        },
-        {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
         },
@@ -14009,9 +13991,27 @@
           "name": "CreditsTitle",
           "persistentUuid": "47e41e14-2a2a-4347-b4f9-bc6702520381",
           "width": 0,
-          "x": 498,
-          "y": 31,
+          "x": 477,
+          "y": 33,
           "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 3,
+          "height": 595,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Names_Jobs",
+          "opacity": 0,
+          "persistentUuid": "164a8572-2e94-4763-b84f-a0e88a767fd8",
+          "width": 1136,
+          "x": 86,
+          "y": 103,
+          "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -14090,10 +14090,10 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Donovan Burrola - Programming & Level Design\nElijah Martiniano - Programming & Level Design\nQuincy Paulos - Art lead\n\nAssociates:\nCharlie Bunch - Assistant Art Lead",
+          "string": "Donovan Burrola - Programming & Level Design\nElijah Martiniano - Programming & Level Design\nQuincy Paulos - Art lead\n\nAssociates:\nCharlie Bunch - Assistant Art Lead\n\nExternal:\n\n\n",
           "font": "Alkhemikal.ttf",
           "textAlignment": "center",
-          "characterSize": 20,
+          "characterSize": 50,
           "color": {
             "b": 24,
             "g": 168,
@@ -14113,11 +14113,11 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Donovan Burrola - Programming & Level Design\nElijah Martiniano - Programming & Level Design\nQuincy Paulos - Art lead\n\nAssociates:\nCharlie Bunch - Assistant Art Lead",
+            "text": "Donovan Burrola - Programming & Level Design\nElijah Martiniano - Programming & Level Design\nQuincy Paulos - Art lead\n\nAssociates:\nCharlie Bunch - Assistant Art Lead\n\nExternal:\n\n\n",
             "font": "Alkhemikal.ttf",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
-            "characterSize": 20,
+            "characterSize": 50,
             "color": "255;168;24"
           }
         }
@@ -14133,7 +14133,65 @@
           }
         ]
       },
-      "events": [],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "Names_Jobs",
+                "Opacity",
+                "+",
+                "2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                " ",
+                "\"Left\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"mainMenu\"",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
       "layers": [
         {
           "ambientLightColorB": 200,
@@ -14245,10 +14303,6 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "SmoothCamera",
-          "type": "SmoothCamera::SmoothCamera"
         },
         {
           "name": "Text",
@@ -14611,16 +14665,6 @@
                   "parameters": [
                     "Platformer_Character",
                     "PlatformerMultitouchMapper",
-                    "yes"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ActivateBehavior"
-                  },
-                  "parameters": [
-                    "Platformer_Character",
-                    "SmoothCamera",
                     "yes"
                   ]
                 },
@@ -16125,6 +16169,7 @@
           ]
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -17805,6 +17850,7 @@
                   ]
                 },
                 {
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [
                     {
@@ -18579,6 +18625,18 @@
           "actions": [
             {
               "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "47145ef21ad7fe6be02a0ba478b5df0761869213c56c4bcf2835f84c6c8c76af_Hit 10.aac",
+                "",
+                "100",
+                "1"
+              ]
+            },
+            {
+              "type": {
                 "value": "AjoutObjConcern"
               },
               "parameters": [
@@ -19349,6 +19407,188 @@
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "SOUND"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::And"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "enemy1",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                  },
+                  "parameters": [
+                    "enemy1",
+                    "PlatformerObject"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "killedNpc",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "f24eba85cff51d9f9cd6f7d8c808ca1d71372e9064af83e4235502ce8eaf3be5_Run_03.wav",
+                "0",
+                "yes",
+                "30",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::IsOnFloor"
+                  },
+                  "parameters": [
+                    "enemy1",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "PlatformBehavior::PlatformerObjectBehavior::IsMovingEvenALittle"
+                  },
+                  "parameters": [
+                    "enemy1",
+                    "PlatformerObject"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Platformer_Character",
+                    "killedNpc",
+                    "True",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "StopSoundCanal"
+              },
+              "parameters": [
+                "",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "PlatformBehavior::IsJumping"
+              },
+              "parameters": [
+                "enemy1",
+                "PlatformerObject"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "killedNpc",
+                "False",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "a1617bd8c1c5df8e001af5b3256272bbe23bd95bd790a6be6bb2cacc5f7ac15d_Jump 10.aac",
+                "0",
+                "no",
+                "30",
+                "1"
+              ]
+            }
+          ]
         }
       ]
     }
