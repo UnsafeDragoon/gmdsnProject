@@ -2146,6 +2146,16 @@
         "userAdded": false
       },
       {
+        "file": "assets/48 - helgi the hero bold.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "assets\\48 - helgi the hero bold.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
         "file": "../../../../Downloads/1.MainTheme-320bit(chosic.com).mp3",
         "kind": "audio",
         "metadata": "",
@@ -2154,6 +2164,48 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/Hit 4.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "a01a5e673d5b3c7319b145c85379f1212b603002d6eb7754d37d53fd4b675613_Hit 4.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Hit/a01a5e673d5b3c7319b145c85379f1212b603002d6eb7754d37d53fd4b675613_Hit 4.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Lose 5.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "b392d04c4df861fb2f8376aa04297fc14f7c886efaf2fbd737471fd7cfcf81fd_Lose 5.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Lose/b392d04c4df861fb2f8376aa04297fc14f7c886efaf2fbd737471fd7cfcf81fd_Lose 5.aac",
+          "name": "gdevelop-asset-store"
+        }
+      },
+      {
+        "file": "assets/Windy Old Weather.aac",
+        "kind": "audio",
+        "metadata": "",
+        "name": "9432098b19fa11dc9e6642318878eca35391d1828d7d3402665baf522fa3f995_Windy Old Weather.aac",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Music/World/9432098b19fa11dc9e6642318878eca35391d1828d7d3402665baf522fa3f995_Windy Old Weather.aac",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -2921,11 +2973,10 @@
           "PercentDamageReduction": 0
         },
         {
-          "isFolded": true,
           "name": "PlatformerObject",
           "type": "PlatformBehavior::PlatformerObjectBehavior",
+          "maxSpeed": 600,
           "jumpSpeed": 650,
-          "maxSpeed": 225,
           "deceleration": 5000,
           "acceleration": 1500,
           "canGoDownFromJumpthru": true,
@@ -6811,6 +6862,48 @@
           ]
         }
       ]
+    },
+    {
+      "assetStoreId": "",
+      "bold": true,
+      "italic": false,
+      "name": "gameFinish",
+      "smoothed": true,
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "string": "You Win!",
+      "font": "DePixelBreit.ttf",
+      "textAlignment": "left",
+      "characterSize": 120,
+      "color": {
+        "b": 0,
+        "g": 255,
+        "r": 252
+      },
+      "content": {
+        "bold": true,
+        "isOutlineEnabled": true,
+        "isShadowEnabled": false,
+        "italic": false,
+        "outlineColor": "0;0;0",
+        "outlineThickness": 15,
+        "shadowAngle": 90,
+        "shadowBlurRadius": 2,
+        "shadowColor": "0;0;0",
+        "shadowDistance": 4,
+        "shadowOpacity": 127,
+        "smoothed": true,
+        "underlined": false,
+        "text": "You Win!",
+        "font": "DePixelBreit.ttf",
+        "textAlignment": "left",
+        "verticalTextAlignment": "top",
+        "characterSize": 120,
+        "color": "252;255;0"
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -6879,6 +6972,9 @@
       },
       {
         "objectName": "NewSprite3"
+      },
+      {
+        "objectName": "gameFinish"
       }
     ]
   },
@@ -7960,7 +8056,7 @@
               },
               "parameters": [
                 "",
-                "..\\..\\..\\..\\Downloads\\Epic-Chase(chosic.com).mp3",
+                "Epic-Chase(chosic.com).mp3",
                 "",
                 "50",
                 "1"
@@ -9590,7 +9686,7 @@
               },
               "parameters": [
                 "",
-                "..\\..\\..\\..\\Downloads\\1.MainTheme-320bit(chosic.com).mp3",
+                "1.MainTheme-320bit(chosic.com).mp3",
                 "0",
                 "yes",
                 "68",
@@ -10836,48 +10932,6 @@
           "variables": [],
           "effects": [],
           "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "bold": true,
-          "italic": false,
-          "name": "gameFinish",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "You Win!",
-          "font": "DePixelBreit.ttf",
-          "textAlignment": "left",
-          "characterSize": 120,
-          "color": {
-            "b": 0,
-            "g": 255,
-            "r": 252
-          },
-          "content": {
-            "bold": true,
-            "isOutlineEnabled": true,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "0;0;0",
-            "outlineThickness": 15,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "You Win!",
-            "font": "DePixelBreit.ttf",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 120,
-            "color": "252;255;0"
-          }
         }
       ],
       "objectsFolderStructure": {
@@ -10912,9 +10966,6 @@
           },
           {
             "objectName": "SkyBackground"
-          },
-          {
-            "objectName": "gameFinish"
           }
         ]
       },
@@ -10988,7 +11039,7 @@
               },
               "parameters": [
                 "",
-                "..\\..\\..\\..\\Downloads\\Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3",
+                "Thunder-Unison-Action-Dramatic-Epic-Music-chosic.com_.mp3",
                 "",
                 "87",
                 "1"
@@ -11235,8 +11286,32 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "Platformer_Character",
+                "Platformer_Character",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "OpacityCapability::OpacityBehavior::SetValue"
+              },
+              "parameters": [
+                "gameFinish",
+                "Opacity",
+                "+",
+                "5"
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -11390,10 +11465,6 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
-          "name": "SmoothCamera",
-          "type": "SmoothCamera::SmoothCamera"
-        },
-        {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
         },
@@ -11423,7 +11494,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6940990811454129,
+        "zoomFactor": 0.671457318723272,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -13802,7 +13873,7 @@
               },
               "parameters": [
                 "",
-                "..\\..\\..\\..\\Downloads\\Epic-Chase(chosic.com).mp3",
+                "Epic-Chase(chosic.com).mp3",
                 "",
                 "50",
                 "1"
@@ -14462,7 +14533,32 @@
               ]
             }
           ],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "ModPlayingOffsetMusicChannel"
+              },
+              "parameters": [
+                "",
+                "0",
+                "=",
+                "6.3"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "9432098b19fa11dc9e6642318878eca35391d1828d7d3402665baf522fa3f995_Windy Old Weather.aac",
+                "0",
+                "yes",
+                "68",
+                "1"
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -14770,6 +14866,18 @@
                     "Resizable",
                     "130",
                     "130"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "a01a5e673d5b3c7319b145c85379f1212b603002d6eb7754d37d53fd4b675613_Hit 4.aac",
+                    "",
+                    "60",
+                    ".75"
                   ]
                 }
               ]
@@ -15996,6 +16104,18 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "47145ef21ad7fe6be02a0ba478b5df0761869213c56c4bcf2835f84c6c8c76af_Hit 10.aac",
+                "",
+                "60",
+                "1"
+              ]
+            },
             {
               "type": {
                 "value": "FireBullet::FireBullet::Fire"
@@ -19641,6 +19761,23 @@
             },
             {
               "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Platformer_Character",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "3"
+              ]
+            },
+            {
+              "type": {
                 "value": "SetNumberVariable"
               },
               "parameters": [
@@ -19901,6 +20038,126 @@
                 "0",
                 "no",
                 "30",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "BowlingBallBlue",
+                "BowlingBallBlue",
+                ">",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Or"
+              },
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "BowlingBallBlue",
+                    "Platform_Ground",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "BowlingBallBlue",
+                    "Platform_Ground2",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "BowlingBallBlue",
+                    "Platform_GroundCloud2",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "BowlingBallBlue",
+                    "Platform_GroundCloud",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "b392d04c4df861fb2f8376aa04297fc14f7c886efaf2fbd737471fd7cfcf81fd_Lose 5.aac",
+                "1",
+                "yes",
+                "20",
+                "1"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "BowlingBallBlue",
+                "BowlingBallBlue",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "StopSoundCanal"
+              },
+              "parameters": [
+                "",
                 "1"
               ]
             }
