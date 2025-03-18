@@ -2134,6 +2134,26 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Arcade/Sound effects/Jump/a1617bd8c1c5df8e001af5b3256272bbe23bd95bd790a6be6bb2cacc5f7ac15d_Jump 10.aac",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "file": "1.MainTheme-320bit(chosic.com).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "1.MainTheme-320bit(chosic.com).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "../../../../Downloads/1.MainTheme-320bit(chosic.com).mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "..\\..\\..\\..\\Downloads\\1.MainTheme-320bit(chosic.com).mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -9552,7 +9572,32 @@
               ]
             }
           ],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "ModPlayingOffsetMusicChannel"
+              },
+              "parameters": [
+                "",
+                "0",
+                "=",
+                "6.3"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "..\\..\\..\\..\\Downloads\\1.MainTheme-320bit(chosic.com).mp3",
+                "0",
+                "yes",
+                "68",
+                "1"
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
